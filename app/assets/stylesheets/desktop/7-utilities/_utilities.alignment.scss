@@ -1,0 +1,59 @@
+// ==========================================================================
+// Text Alignment
+// ==========================================================================
+
+// Here we set a variable assuming that default and module settings
+// are not set globally. If they have been previously been defined,
+// the following variable will be overriden and will be set to `true`.
+$imported-global-settings: false !default;
+
+@if ($imported-global-settings == false) {
+  @warn "Oops! Have you included a global settings files?";
+}
+
+
+// Partial to align Text Left, Right, Center or Justify
+.u-align-center {
+  text-align: center !important;
+}
+.u-align-left {
+  text-align: left !important;
+}
+.u-align-right {
+  text-align: right !important;
+}
+.u-align-justify {
+  text-align: justify !important;
+}
+
+
+.u-valign-top {
+  vertical-align: top !important;
+}
+.u-valign-middle {
+  vertical-align: middle !important;
+}
+.u-valign-bottom {
+  vertical-align: bottom !important;
+}
+
+.u-center-mrgn {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.u-center-transform {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.u-center-transform--v {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.u-center-transform--h {
+  left: 50%;
+  transform: translateX(-50%);
+}

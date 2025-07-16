@@ -1,0 +1,66 @@
+@page {
+  size: A4;
+  margin: 0;
+}
+
+$imported-global-settings: true;
+
+// defined variables
+$base-pixel: 842px;
+$base-mm: 297mm;
+
+// functions and mixins
+@function pixel-to-mm($pixel) {
+  @return $pixel / $base-pixel * $base-mm;
+  // @return $pixel;
+}
+
+@function rem-calc($pixel) {
+  @return pixel-to-mm($pixel);
+}
+
+// from https://github.com/bukalapak/arin/blob/master/scss/arin/2-tools/_tools.clearfix.scss
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after { clear: both; }
+}
+
+// from https://github.com/bukalapak/arin/blob/master/scss/arin/2-tools/_tools.font-size.scss
+@mixin font-size($font-size, $line-height: auto, $global-line-height: $global-line-height) {
+
+  font-size: rem-calc($font-size);
+
+  @if $line-height == auto {
+    line-height: ceil($font-size / $global-line-height) * ($global-line-height / $font-size);
+  }
+  @else {
+    @if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
+      line-height: $line-height;
+    }
+    @elseif ($line-height != none and $line-height != false) {
+      @error "D'oh! '#{$line-height}' is not a valid value for `line-height`."
+    }
+  }
+
+}
+
+@import "desktop/1-settings/settings.core";
+@import "desktop/1-settings/settings.colors";
+@import "desktop/1-settings/settings.manifest";
+@import "desktop/1-settings/settings.typography";
+@import "desktop/2-tools/tools.background";
+@import "desktop/2-tools/tools.opacity";
+@import "desktop/2-tools/tools.whitespaces";
+@import "desktop/2-tools/tools.text-size";
+@import "desktop/7-utilities/utilities.alignment";
+@import "desktop/7-utilities/utilities.colors";
+@import "desktop/7-utilities/utilities.miscs";
+@import "desktop/7-utilities/utilities.texts";
+@import "desktop/7-utilities/utilities.whitespaces";
+
+@import "pages/print/base";
+@import "pages/print/vp-p2p";

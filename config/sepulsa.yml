@@ -1,0 +1,19 @@
+development:
+  host: https://horven-api.sumpahpalapa.com/api/
+  username: bukalapak
+  server_key: TU4vERaBGS7e3Hjs7c3aLfyBk4pU5oj17nsBfeCtqOo
+
+staging:
+  host: https://horven-api.sumpahpalapa.com/api/
+  username: bukalapak
+  server_key: TU4vERaBGS7e3Hjs7c3aLfyBk4pU5oj17nsBfeCtqOo
+
+test:
+  host: https://horven-api.sumpahpalapa.com/api/
+  username: bukalapak
+  server_key: TU4vERaBGS7e3Hjs7c3aLfyBk4pU5oj17nsBfeCtqOo
+
+production:
+  host: <%= ENV['SEPULSA_SERVER_HOST'] %>
+  username: <%= ENV['SEPULSA_SERVER_USERNAME'] %>
+  server_key: <%= ENV['SEPULSA_SERVER_KEY'] %>

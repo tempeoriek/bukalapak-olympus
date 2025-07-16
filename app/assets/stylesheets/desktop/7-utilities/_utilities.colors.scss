@@ -1,0 +1,83 @@
+// ==========================================================================
+// Colors
+// ==========================================================================
+
+// Here we set a variable assuming that default and module settings
+// are not set globally. If they have been previously been defined,
+// the following variable will be overriden and will be set to `true`.
+$imported-global-settings: false !default;
+
+@if ($imported-global-settings == false) {
+  @warn "Oops! Have you included a global settings files?";
+}
+
+// The below loop  will generate us a suite of classes like:
+//
+//    // foreground colors
+//    .u-fg--red-brand
+//    .u-fg--green
+//
+//    // background colors
+//    .u-bg--red-brand
+//    .u-bg--green
+//
+
+//scss-lint:disable ImportantRule
+@each $name, $color in $global-utilities-colors {
+  .u-bg--#{$name} {
+    background-color: $color !important;
+  }
+
+  .u-fg--#{$name} {
+    &,
+    &:focus,
+    &:hover {
+      color: $color !important;
+    }
+  }
+}
+
+@each $name, $color in $global-utilities-colors {
+  .u-bg-hover--#{$name}:hover {
+    background-color: $color !important;
+  }
+
+  .u-fg-hover--#{$name}:hover {
+    color: $color !important;
+  }
+}
+
+@each $name, $color in $global-external-colors {
+  .u-bg-external--#{$name} {
+    background-color: $color !important;
+  }
+
+  .u-fg-external--#{$name} {
+    &,
+    &:focus,
+    &:hover {
+      color: $color !important;
+    }
+  }
+}
+//scss-lint:enable ImportantRule
+
+.u-bg--gradient {
+  background-image: linear-gradient(to bottom, $global-color-white, $global-color-sand-light);
+}
+
+.u-bg--gradient-inverse {
+  background-image: linear-gradient(to top, $global-color-white, $global-color-sand-light);
+}
+
+.u-bg--gradient--lr {
+  background-image: linear-gradient(to right, transparent, $global-color-ash-light);
+}
+
+.u-bg--gradient--rl {
+  background-image: linear-gradient(to left, transparent, $global-color-ash-light);
+}
+
+.u-bg-transparentize--black-10 {
+  background-color: transparentize($global-color-black, .1) !important; // black with 90% opacity
+}

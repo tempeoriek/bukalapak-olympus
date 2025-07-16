@@ -1,0 +1,106 @@
+%table#content_body_header.text--center
+  %tbody
+    %tr
+      %td
+        %div{style: "max-width: 500px; display: inline-block;"}
+          %h3 Transaksi Kamu Tidak Berhasil Diproses
+%table
+  %tbody
+    %tr
+      %td
+      %td.separator-td{style: "width: 77px;"}
+        %div.separator
+      %td
+%table.text--left
+  %tbody
+    %tr
+      %td.content-body-header-second
+        %h4{style: "padding-bottom: 14px;"}
+          = "Hai #{user[:name]},"
+        %div{style: "max-width: 500px; display: inline-block;"}
+          %p{style: "padding-bottom: 22px"}= I18n.t("mailer.failed", product_name: "Air PDAM", invoice_id: payment_id, payment_amount: money(total_amount)).html_safe
+= render 'views/layouts/partial/_invoice_common_failed'
+= render 'views/layouts/partial/_transaction_list.css'
+- content_for :extra_content do
+  %table#table_content
+    %tr
+      %td.container-siblings
+      %td#table_content_td.container
+        %table
+          %tbody
+            %tr
+              %td.text--left
+                %h1{style: "padding-bottom: 14px;"} Detail Transaksi
+                %div.box-table.box-table--large
+                  %p.label Nomor Pelanggan:
+                  %p.text--medium= transaction.customer_number
+                %div.box-table.box-table--large
+                  %p.label Nama Lengkap:
+                  %p.text--medium= transaction.customer_name
+                %div.box-table.box-table--large
+                  %p.label Domisili:
+                  %p.text--medium= transaction.operator.name
+                %div.box-table.box-table--large
+                  %p.label Periode:
+                  %p.text--medium= transaction.bill_period
+                %div.box-table.box-table--large
+                  %p.label Pemakaian:
+                  %p.text--medium= "#{transaction.usage.to_i > 0 ? transaction.usage : '0'} M3"
+                  - detail_usage = ""
+                  - transaction.pdam_bills.each do |bill|
+                    - bill_period = I18n.l Date.parse("#{bill.bill_period}"), format: '%B %Y'
+                    - detail_usage += "<p>#{bill_period}: #{bill.cubication}</p>"
+                  = detail_usage.html_safe
+                %div.box-table.box-table--large
+                  %p.label Partner Layanan:
+                  %p.text--medium #{transaction.partner}
+                %div.box-table.box-table--large
+                  %p.label Jumlah Tertagih:
+                  %p.text--medium= money(transaction.amount - transaction.admin_charge - transaction.total_penalty_fee)
+                %div.box-table.box-table--large
+                  %table.key-value
+                    %tr
+                      %td
+                        %p.label Jumlah Tertagih:
+                      %td
+                        %p.text--medium= money(transaction.amount - transaction.admin_charge - transaction.total_penalty_fee)
+                    - if uniq_code > 0
+                      %tr
+                        %td Kode Pembayaran:
+                        %td= money(uniq_code)
+                    - if voucher_amount > 0
+                      %tr
+                        %td Voucher:
+                        %td
+                          (-)
+                          = money(voucher_amount)
+                    - if deposit_reduction_amount > 0
+                      %tr
+                        %td Saldo Bukadompet:
+                        %td
+                          (-)
+                          = money(deposit_reduction_amount)
+                    - if dana_reduction_amount > 0
+                      %tr
+                        %td Saldo DANA:
+                        %td
+                          (-)
+                          = money(dana_reduction_amount)
+                    %tr
+                      %td Denda:
+                      %td= money(transaction.total_penalty_fee)
+                    %tr
+                      %td Biaya Administrasi:
+                      %td= money(transaction.admin_charge)
+                %div.box-table{style: 'padding-right: 24px'}
+                  %table.key-value
+                    %tr
+                      %td
+                        %strong Total
+                      %td
+                        %strong= money(total_amount)
+        %table{style: 'margin-top: 16px'}
+          %td
+            %a.btn-block{href: "https://www.bukalapak.com/payment/invoices/#{payment_id}", target: "_blank"}
+              Lihat Detail Transaksi
+        %td.container-siblings

@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "state": {
+          "enum": [
+            "processed",
+            "succeeded",
+            "failed"
+          ]
+        },
+        "stuck_transaction_date": {
+          "type": "string"
+        },
+        "triggered_by_user_id": {
+          "type": "number"
+        },
+        "triggered_by_user_name": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string"
+        },
+        "updated_at": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "state",
+        "stuck_transaction_date",
+        "triggered_by_user_id",
+        "triggered_by_user_name",
+        "created_at",
+        "updated_at"
+      ]
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "http_status": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "http_status"
+      ]
+    }
+  },
+  "required": [
+    "data",
+    "meta"
+  ]
+}

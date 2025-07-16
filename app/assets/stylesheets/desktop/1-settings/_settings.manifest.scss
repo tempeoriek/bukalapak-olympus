@@ -1,0 +1,412 @@
+// ==========================================================================
+// Manifest Settings
+// ==========================================================================
+//
+// This is the file where you can edit and modify default value from
+// framework or your dependency.
+//
+
+
+// Global Settings:
+// ==========================================================================
+$global-font-size:                 14px;
+$global-line-height:               20px;
+$global-text-color:                $global-color-black;
+$global-background-color:          $global-color-white;
+$global-font-weight:               400;
+$global-border-radius:             2px;
+$support-old-ie:                   true;
+
+
+//
+// Breakpoints Settings:
+// ==========================================================================
+//
+// 60em      == 960px
+// 60.063em  == 961px
+// 71.250em  == 1140px
+// 71.313em  == 1141px
+// 82.500em  == 1320px
+// 82.563em  == 1321px
+// 120em     == 1920px
+// 120.063em == 1921px
+//
+// "large-only"   "#{$screen} and (min-width: 70.063em) and (max-width: 82.500em)",
+// "xlarge"       "#{$screen} and (min-width: 82.563em)",
+// "xlarge-only"  "#{$screen} and (min-width: 82.563em) and (max-width: 120em)",
+// "xxlarge"      "#{$screen} and (min-width: 120.063em)",
+//
+
+$screen:         "only screen";
+
+$breakpoints: (
+  "small"        "#{$screen}",
+  "small-only"   "#{$screen} and (max-width: 71.250em)",
+  "medium"       "#{$screen} and (min-width: 71.313em)",
+  "medium-only"  "#{$screen} and (min-width: 71.313em) and (max-width: 82.500em)",
+  "large"        "#{$screen} and (min-width: 82.563em)",
+
+  "portrait"     "#{$screen} and (orientation: portrait)",
+  "landscape"    "#{$screen} and (orientation: landscape)",
+  "retina"       "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"
+);
+
+
+// Tools - z-index settings:
+// ==========================================================================
+$z-layers: (
+  "over-the-top":       9999,
+  "modal":              1000,
+  "modal-overlay":       999,
+  "tooltip-header":      998,
+  "header":              997,
+  "below-header":        996,
+  "dropdown":             10,
+  "dropdown-overlay":      9,
+  'chat-room':             8,
+  "tooltip":               7,
+  "input-icon":            6,
+  "input-focus":           5,
+  "upper":                 2,
+  "default":               1,
+  "below":                -1,
+  "bottomless-pit":     -9000
+); // usage: .modal { z-index: z("modal") };
+
+
+
+
+// Elements - Links settings:
+// ==========================================================================
+$anchor-font-weight:           400;
+$anchor-font-color:            $global-color-red-brand;
+$anchor-font-color-hover:      $global-color-red-dark;
+$anchor-text-decoration-hover: underline;
+
+
+// Objects - Ratios settings:
+// ==========================================================================
+$ratios: (
+  (16:9),
+);
+
+
+// Objects - Container settings:
+// ==========================================================================
+$container-width:           984px;
+$container-gutter:          12px;
+
+
+// Objects - Layout settings:
+// ==========================================================================
+$layout-gutter:             24px;
+$enable-layout--bleed:      true;
+$enable-layout--micro:      true;
+$enable-layout--tiny:       true;
+$enable-layout--responsive: true;
+$enable-layout--columns:    true;
+
+
+// Objects - Box settings:
+// ==========================================================================
+$enable-box--bleed:  true;
+$enable-box--tiny:   true;
+$enable-box--small:  true;
+
+
+// Objects - Square settings:
+// ==========================================================================
+$enable-square-bottom-left:     true;
+$enable-square-width:           7, 8, 10;
+$enable-square-tiny-gutter:     true;
+
+
+// Objects - Flag settings:
+// ==========================================================================
+$enable-flag--micro:  true;
+$enable-flag--tiny:   true;
+$enable-flag--small:  true;
+$enable-flag--medium: true;
+$enable-flag--top:    true;
+$enable-flag--rev:    true;
+$enable-flag--bleed:  true;
+$enable-flag--bottom: true;
+
+
+// Objects - Split settings:
+// ==========================================================================
+$enable-split--micro:  true;
+$enable-split--tiny:  true;
+
+
+// Components - Buttons settings:
+// ==========================================================================
+$enable-btn--tiny:         true;
+$enable-btn--small:        true;
+$enable-btn--large:        true;
+$enable-btn--narrow:       true;
+$enable-btn--block:        true;
+$enable-btn--square:       true;
+$enable-btn--pill:         true;
+$enable-btn--ghost:        true;
+$enable-btn--naked:        true;
+$enable-btn--tag:          true;
+$enable-btn--semi-naked:   true;
+$btn-ghost-border-width:   1px;
+$enable-btn--red:          true;
+$enable-btn--green:        true;
+$enable-btn--yellow:       true;
+$enable-btn--pink:         true;
+$enable-btn--disabled:     true;
+$enable-btn-group:         true;
+$enable-btn-group--equal:  true;
+$enable-btn--farleft-icon: true;
+$enable-btn--spinner:      true;
+
+
+// Components - Table setting:
+// ==========================================================================
+$enable-table--auto:        true;
+$enable-table--equal:       true;
+$enable-table--rows:        true;
+$enable-table--cells:       true;
+$enable-table--zebra:       true;
+$enable-table--transaction: true;
+
+
+// Components - Tabs settings:
+// ==========================================================================
+$enable-tab--inside:      true;
+$enable-tab--narrowside:  true;
+$enable-tab--micro:       true;
+
+
+// Components - Breadcrumb settings:
+// ==========================================================================
+$enable-breadcrumb--panelize:   true;
+$enable-breadcrumb--ghost:      true;
+
+
+// Components - Card settings:
+// ==========================================================================
+$enable-card-vertical:      true;
+
+
+// Components - Product Card settings:
+// ==========================================================================
+$enable-product-card--borderless: true;
+$enable-product-card--panel: true;
+
+
+// Components - Label settings:
+// ==========================================================================
+$enable-label--red:           true;
+$enable-label--green:         true;
+$enable-label--yellow:        true;
+$enable-label--pink:          true;
+$enable-label--blue:          true;
+$enable-label--ghost:         true;
+$enable-label--large:         true;
+$enable-label--unstyled-text: true;
+$enable-label--lapak-terbaik: true;
+
+
+// Components - Badges settings:
+// ==========================================================================
+$enable-badge--tiny:   true;
+$enable-badge--small:  true;
+$enable-badge--large:  true;
+$enable-badge--green:  true;
+$enable-badge--yellow: true;
+$enable-badge--pink:   true;
+$enable-badge--white:  true;
+$enable-badge--gray:   true;
+
+
+// Components - Separator settings:
+// ==========================================================================
+$enable-separator-text-left:  true;
+$enable-separator-sand:       true;
+$enable-separator-vertical: true;
+
+
+// Components - Ellipsis settings:
+// ==========================================================================
+$enable-ellipsis-sand:            true;
+$enable-ellipsis-sand-light:      true;
+$enable-ellipsis-small:           true;
+
+
+// Components - Notification settings:
+// ==========================================================================
+$enable-notification--small:         true;
+$enable-notification--success:       true;
+$enable-notification--error:         true;
+$enable-notification--solid-color:   true;
+$enable-notification--flash:         true;
+$enable-notification--contextual:    true;
+$enable-notification--announcement:  true;
+$enable-notification--thick:         true;
+$enable-notification--dashed:        true;
+$enable-notification--gray:          true;
+$enable-notification--white:         true;
+$enable-notification--sand:          true;
+
+
+// Components - Avatar settings:
+// ==========================================================================
+$enable-avatar--tiny: true;
+$enable-avatar--small: true;
+$enable-avatar--medium: true;
+$enable-avatar--large: true;
+$enable-avatar--xlarge: true;
+$enable-avatar--xxlarge: true;
+
+
+// Components - Icon settings:
+// ==========================================================================
+$enable-icon--small:  true;
+$enable-icon--medium: true;
+$enable-icon--large:  true;
+$enable-icon--huge:   true;
+
+
+// Components - Duotone Icon settings:
+// ==========================================================================
+$enable-icon-duotone--small:  true;
+$enable-icon-duotone--medium: true;
+$enable-icon-duotone--large:  true;
+
+
+//
+// Components - Remodal settings:
+// ==========================================================================
+$enable-remodal-small:  true;
+$enable-remodal-medium: true;
+$enable-remodal-large:  true;
+
+
+//
+// Components - Modal settings:
+// ==========================================================================
+$enable-modal--vendor: true;
+
+
+//
+// Components - Media settings:
+// ==========================================================================
+$enable-media-ratio--4-3: true;
+$enable-media-ratio--8-5: true;
+$enable-media-ratio--16-9: true;
+
+$enable-media-position--top: true;
+
+
+//
+// Utilities - Hr settings:
+// ==========================================================================
+$enable-hr--small:  true;
+$enable-hr--tiny:  true;
+$enable-hr--line:   true;
+
+
+//
+// Components - Progress Bar
+// ==========================================================================
+$enable-progress-bar-green: true;
+
+
+// Components - Scrollerbox
+// ==========================================================================
+$enable-scrollerbox--horizontal:          true;
+$enable-scrollerbox--arrow-inside:        true;
+$enable-scrollerbox--arrow-gradient:      true;
+$enable-scrollerbox--gradient-sand:       true;
+$enable-scrollerbox--arrow-inside-dark:   true;
+
+
+//
+// Components - Progressbar settings:
+// ==========================================================================
+$enable-progress-bar-yellow: true;
+
+//
+// Components - Progressbar product review:
+// ==========================================================================
+$enable-progress-bar-azure: true;
+
+//
+// Components - Banner Thumb:
+// ==========================================================================
+$enable-banner-for-setting:       true;
+$enable-banner-has-video:         true;
+$enable-banner-bottom-separator:  true;
+
+//
+// Components - Dot settings:
+// ==========================================================================
+$enable-dot--red: true;
+$enable-dot--yellow: true;
+
+//
+// Components - Seo settings:
+// ==========================================================================
+$enable-seo-tiny: true;
+
+//
+// Components - Sparkle:
+// ==========================================================================
+$enable-inside-jumbotron: true;
+
+//
+// Components - Brand Sidebar:
+// ==========================================================================
+$enable-secondary-sidebar:  true;
+$enable-filter-sidebar:     true;
+
+//
+// Components - Brand Box:
+// ==========================================================================
+$enable-box-zigzag:   true;
+$enable-box-catalog:  true;
+$enable-box-trigger:  true;
+$enable-box-more:     true;
+
+// Components - Brand Box:
+// ==========================================================================
+$enable-box-zigzag: true;
+
+
+// Components - On Boarding:
+// ==========================================================================
+$enable-arrow-top:        true;
+$enable-arrow-bottom:     true;
+$enable-arrow-right:      true;
+$enable-arrow-left:       true;
+$enable-width-small:      true;
+$enable-centered:         true;
+
+//
+// Components - Switcher:
+// ==========================================================================
+$enable-switch-small:           true;
+$enable-switch-thin:            true;
+$enable-switch-no-transition:   true;
+
+
+//
+// Utilities - Widths (Arin)
+// ==========================================================================
+$enable-offsets: true;
+
+
+//
+// Utilities - Widths
+// ==========================================================================
+$enable-column-width: 2, 3, 4, 5, 7, 10;
+
+
+//
+// Components - Nav Menu settings:
+// ==========================================================================
+//$nav-menu-list-items: 7; // max 8, default 6

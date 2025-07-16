@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "name": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "state"
+      ]
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "http_status": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "http_status"
+      ]
+    }
+  },
+  "required": [
+    "data",
+    "meta"
+  ]
+}

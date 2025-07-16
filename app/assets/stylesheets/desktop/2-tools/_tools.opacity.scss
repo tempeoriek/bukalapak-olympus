@@ -1,0 +1,10 @@
+// ====================
+// Opacity
+// ====================
+
+// @include t-opacity(7) -> opacity: .7;
+// @include t-opacity(2.5) -> opacity: .25;
+
+@mixin t-opacity($alpha) {
+  opacity: $alpha / 10;
+}

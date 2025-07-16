@@ -1,0 +1,6 @@
+imports:
+  minerva: minerva/
+
+git module minerva:
+  url: https://runner.gitlab.cloud.bukalapak.io/infra/gitops/minerva.git
+  rev: fd16bb50244d09f3264966cfb81f6cf742c1cb69

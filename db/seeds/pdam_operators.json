@@ -1,0 +1,1064 @@
+[{
+  "code": "pdam_denpasar",
+  "name": "Denpasar",
+  "group": "Bali",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_buleleng",
+  "name": "Kab. Buleleng",
+  "group": "Bali",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_sleman",
+  "name": "Kab. Sleman",
+  "group": "Daerah Istimewa Yogyakarta",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_aetra",
+  "name": "Aetra Jakarta",
+  "group": "DKI Jakarta",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/aetra.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_palyja",
+  "name": "Palyja Jakarta",
+  "group": "DKI Jakarta",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/palyja.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_bandung",
+  "name": "Bandung",
+  "group": "Jawa Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_bekasi",
+  "name": "Bekasi",
+  "group": "Jawa Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_bdg",
+  "name": "Kab. Bandung",
+  "group": "Jawa Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_karawang",
+  "name": "Karawang",
+  "group": "Jawa Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_bandung",
+  "name": "Kota Bandung",
+  "group": "Jawa Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_bogor",
+  "name": "Kota Bogor",
+  "group": "Jawa Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_depok",
+  "name": "Kota Depok",
+  "group": "Jawa Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_boyolali",
+  "name": "Boyolali",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_grobogan",
+  "name": "Grobogan",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_banyumas",
+  "name": "Kab. Banyumas",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_brebes",
+  "name": "Kab. Brebes",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_cilacap",
+  "name": "Kab. Cilacap",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_karang",
+  "name": "Kab. Karanganyar",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_kendal",
+  "name": "Kab. Kendal",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_klaten",
+  "name": "Kab. Klaten",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_purbalingga",
+  "name": "Kab. Purbalingga",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_rembang",
+  "name": "Kab. Rembang",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_smg",
+  "name": "Kab. Semarang",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kebumen",
+  "name": "Kebumen",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_salatiga",
+  "name": "Kota Salatiga",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kota_semarang",
+  "name": "Kota Semarang",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_surakarta",
+  "name": "Kota Surakarta",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_pekalongan",
+  "name": "Pekalongan",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_purworejo",
+  "name": "Purworejo",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_sragen",
+  "name": "Sragen",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_tamanggung",
+  "name": "Temanggung",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_wonogiri",
+  "name": "Wonogiri",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_wonosobo",
+  "name": "Wonosobo",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_bangkalan",
+  "name": "Kab. Bangkalan",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_bojonegor",
+  "name": "Kab. Bojonegoro",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_bondow",
+  "name": "Kab. Bondowoso",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_jember",
+  "name": "Kab. Jember",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_sidoarjo",
+  "name": "Kab. Sidoarjo",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_madiun",
+  "name": "Kota Madiun",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_malang",
+  "name": "Kota Malang",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_sby",
+  "name": "Kota Surabaya",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_malang",
+  "name": "Malang",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_mojokerto",
+  "name": "Mojokerto",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_probolinggo",
+  "name": "Probolinggo",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_situbondo",
+  "name": "Situbondo",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_blpn",
+  "name": "Balikpapan",
+  "group": "Kalimantan",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_banjarmasin",
+  "name": "Banjarmasin",
+  "group": "Kalimantan",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_berau",
+  "name": "Kab. Berau",
+  "group": "Kalimantan",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_hulu",
+  "name": "Kab. Hulu Sungai",
+  "group": "Kalimantan",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kab_kubu",
+  "name": "Kab. Kubu Raya",
+  "group": "Kalimantan",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_banjarbaru",
+  "name": "Kota Banjar Baru",
+  "group": "Kalimantan",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_pontianak",
+  "name": "Kota Pontianak",
+  "group": "Kalimantan",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_grogot",
+  "name": "Kota Tanah Grogot",
+  "group": "Kalimantan",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_kubu",
+  "name": "Kubu Raya",
+  "group": "Kalimantan",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_tapin",
+  "name": "Tapin",
+  "group": "Kalimantan",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_mataram",
+  "name": "Kota Mataram",
+  "group": "Nusa Tenggara Barat (NTB)",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_lombokteng",
+  "name": "Lombok Tengah",
+  "group": "Nusa Tenggara Barat (NTB)",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_makasar",
+  "name": "Kota Makasar",
+  "group": "Sulawesi",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_manado",
+  "name": "Kota Manado",
+  "group": "Sulawesi",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_jambi",
+  "name": "Jambi",
+  "group": "Sumatera",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_medan",
+  "name": "Kota Medan",
+  "group": "Sumatera",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_lampung",
+  "name": "Lampung",
+  "group": "Sumatera",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code": "pdam_palembang",
+  "name": "Palembang",
+  "group": "Sumatera",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "sepulsa"
+},
+{
+  "code":"400011",
+  "name": "PDAM Kab. Banyumas",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400021",
+  "name": "PDAM Kab. Kebumen",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400041",
+  "name": "PDAM Kota Magelang",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pdam_grogot.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400051",
+  "name": "PDAM Kab. Cilacap",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400061",
+  "name": "PDAM Kota Semarang",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pdam_grogot.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400071",
+  "name": "PDAM Kab. Sleman",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400081",
+  "name": "PDAM Kab. Boyolali",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400091",
+  "name": "PDAM Kab. Jepara",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400101",
+  "name": "PDAM Kab. Pekalongan",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400111",
+  "name": "PDAM Kota Banjar",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400121",
+  "name": "PDAM Kab. Karanganyar",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400141",
+  "name": "PDAM Kab. Wonogiri",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400151",
+  "name": "PDAM Kab. Magelang",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400161",
+  "name": "PDAM Kab. Situbondo",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400171",
+  "name": "PDAM Kab. Probolinggo",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400181",
+  "name": "PDAM Kab. Sragen",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pdam_grogot.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400191",
+  "name": "PDAM Kab. Bondowoso",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400201",
+  "name": "PDAM Kab. Semarang",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400211",
+  "name": "PDAM Kab. Purworejo",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400221",
+  "name": "PDAM Kab. Bandung",
+  "group": "Jawa Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400231",
+  "name": "PDAM Kota Banjarmasin",
+  "group": "Kalimantan",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pdam_grogot.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400251",
+  "name": "PDAM Kota Surakarta",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400261",
+  "name": "PDAM Kota Madiun",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400271",
+  "name": "PDAM Kab. Purbalingga",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400281",
+  "name": "PDAM Kab. Malang",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400301",
+  "name": "PDAM Kab. Rembang",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400311",
+  "name": "PDAM Kab. Lombok Tengah",
+  "group": "Nusa Tenggara Barat (NTB },",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400321",
+  "name": "PDAM Kota Salatiga",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400331",
+  "name": "PDAM Kab. Wonosobo",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400341",
+  "name": "PDAM Kab. Brebes",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400351",
+  "name": "PDAM Kab. Jember",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400371",
+  "name": "PDAM Kab. Buleleng",
+  "group": "Bali",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400381",
+  "name": "PDAM Giri Menang Mataram",
+  "group": "Nusa Tenggara Barat (NTB },",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400401",
+  "name": "PDAM Intan Banjar",
+  "group": "Kalimantan",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400411",
+  "name": "PDAM Kab. Temanggung",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400421",
+  "name": "PDAM Kab. Blora",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400431",
+  "name": "PDAM Kab. Kudus",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pdam_grogot.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400441",
+  "name": "PDAM PALYJA",
+  "group": "DKI Jakarta",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400451",
+  "name": "PDAM AETRA",
+  "group": "DKI Jakarta",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400461",
+  "name": "PDAM Kota Bandung",
+  "group": "Jawa Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400481",
+  "name": "PDAM Kota Palembang",
+  "group": "Sumatera",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400511",
+  "name": "PDAM Kab. Sukoharjo",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400541",
+  "name": "PDAM Kota Denpasar",
+  "group": "Bali",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400551",
+  "name": "PDAM Kab. Badung",
+  "group": "Bali",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pdam_grogot.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400591",
+  "name": "PDAM Kab. Pati",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400601",
+  "name": "PDAM Kab. Klungkung",
+  "group": "Bali",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400611",
+  "name": "PDAM Kab. Banyuwangi",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400621",
+  "name": "PDAM Kab. Ciamis",
+  "group": "Jawa Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400631",
+  "name": "PDAM Kab. Sumedang",
+  "group": "Jawa Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400651",
+  "name": "PDAM Kab. Jombang",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400661",
+  "name": "PDAM Kab. Garut",
+  "group": "Jawa Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400681",
+  "name": "PDAM Kab. Ponorogo",
+  "group": "Jawa Timur",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400691",
+  "name": "PDAM Kota Depok",
+  "group": "Jawa Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400701",
+  "name": "PDAM Kota Bogor",
+  "group": "Jawa Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400711",
+  "name": "PDAM Kab. Bogor",
+  "group": "Jawa Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pdam_kab_buleleng.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400871",
+  "name": "PDAM Kota Tegal",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pdam_grogot.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400241",
+  "name": "PDAM Kab. Kendal",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400521",
+  "name": "PDAM Kab. Grobogan",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"400531",
+  "name": "PDAM Kota Yogyakarta",
+  "group": "Jawa Tengah",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"401191",
+  "name": "PDAM Kab Majalengka",
+  "group": "Jawa Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"401201",
+  "name": "PDAM Kota Payakumbuh",
+  "group": "Sumatra Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"401211",
+  "name": "PDAM Kota Padang",
+  "group": "Sumatra Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"401221",
+  "name": "PDAM Kota Padang Panjang",
+  "group": "Sumatra Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"401231",
+  "name": "PDAM Kab Bangka Barat",
+  "group": "Kepulauan Bangka Belitung",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"401241",
+  "name": "PDAM Kab Tanah Datar",
+  "group": "Sumatra Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"401251",
+  "name": "PDAM Kab Solok",
+  "group": "Sumatra Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"401261",
+  "name": "PDAM IPL BSD",
+  "group": "Banten",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"401281",
+  "name": "PDAM Kab Tabalong",
+  "group": "Kalimantan Selatan",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"401291",
+  "name": "PDAM Kab Bekasi",
+  "group": "Jawa Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+},
+{
+  "code":"401291",
+  "name": "PDAM Bukit Tinggi",
+  "group": "Sumatra Barat",
+  "image_url": "https://s4.bukalapak.com/images/virtual_product/pdam/pam.png",
+  "active": 1,
+  "partner": "dji"
+}]

@@ -1,0 +1,19 @@
+- key = payment_type
+- if key == 'atm'
+  - key = 'transfer'
+
+%table
+  %tbody
+    %tr
+      %td
+        %div.box-table{style: "padding: 24px"}
+          %p.label Total
+          %p.text--large.text--crimson{style: 'margin-bottom: 8px'}
+            = money(total_amount)
+          %span.btn-icon.btn--uranium
+            %img{src: "https://s1.bukalapak.com/images/mailer/icon/transaction_paid.png", height: "16px" }
+            %span.text--small Dibayar
+        %div.box-table.text--left
+          %p.label Metode Pembayaran
+          %img{src: "https://s1.bukalapak.com/images/mailer/payment_logo/#{key}.png", alt: "#{key}", title: "#{key}", height: "40px" }
+          %p.text--medium= payment_method

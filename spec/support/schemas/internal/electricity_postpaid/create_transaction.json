@@ -1,0 +1,175 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "type": {
+          "type": "string"
+        },
+        "remote_transaction_id": {
+          "type": "number"
+        },
+        "invoice_id": {
+          "type": "number"
+        },
+        "reference_number": {
+          "type": "string"
+        },
+        "image_url": {
+          "type": "string"
+        },
+        "customer_number": {
+          "type": "string"
+        },
+        "customer_name": {
+          "type": "string"
+        },
+        "segmentation": {
+          "type": "string"
+        },
+        "power": {
+          "type": "number"
+        },
+        "stand_meter": {
+          "type": "string"
+        },
+        "outstanding_bill": {
+          "type": "number"
+        },
+        "unpaid_bill": {
+          "type": ["number", "null"]
+        },
+        "period": {
+          "type": "array"
+        },
+        "penalty_fee": {
+          "type": "number"
+        },
+        "amount": {
+          "type": "number"
+        },
+        "admin_charge": {
+          "type": "number"
+        },
+        "revenue": {
+          "type": "number"
+        },
+        "state": {
+          "type": "string"
+        },
+        "processed_at": {
+          "type": ["string", "null"]
+        },
+        "succeeded_at": {
+          "type": ["string", "null"]
+        },
+        "failed_at": {
+          "type": ["string", "null"]
+        },
+        "info_text": {
+          "type": ["string", "null"]
+        },
+        "partner_name": {
+          "type": "string"
+        },
+        "transaction_type": {
+          "type": "string"
+        },
+        "partner": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          }
+        },
+        "state_changed_at": {
+          "type": "object",
+          "properties": {
+            "processed_at": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "succeeded_at": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "failed_at": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "required": [
+            "processed_at",
+            "succeeded_at",
+            "failed_at"
+          ]
+        },
+        "bills": {
+          "type": "array"
+        },
+        "mass_bill_id": {
+          "type": ["string", "null"]
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "remote_transaction_id",
+        "reference_number",
+        "image_url",
+        "customer_number",
+        "customer_name",
+        "segmentation",
+        "power",
+        "stand_meter",
+        "outstanding_bill",
+        "unpaid_bill",
+        "period",
+        "penalty_fee",
+        "amount",
+        "admin_charge",
+        "revenue",
+        "state",
+        "state_changed_at"
+      ]
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "http_status": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "http_status"
+      ]
+    }
+  },
+  "required": [
+    "data",
+    "meta"
+  ]
+}

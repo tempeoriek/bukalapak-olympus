@@ -1,0 +1,19 @@
+%table{width: "100%", align: "left"}
+  %tr
+    %td
+      %div{style: "margin-bottom: 12px;"}
+        %h1 Transaksi Rutin Kamu Sudah Diberhentikan
+
+      %div{style: "margin-bottom: 18px; font-size: 14px"}>
+        %p{style: "color: #333333"}
+          Hai #{@user[:name]},<br>
+          Kamu telah berhenti melakukan transaksi secara rutin untuk tagihan #{@product_name}. Kamu dapat mengaktifkan kembali transaksi rutin kamu dengan klik tombol di bawah ini:
+
+      %div{style: "margin-bottom: 18px; font-size: 14px"}>
+        %a{href: "https://www.bukalapak.com/transaksi-rutin", id: 'actionButton', target: '_blank' } Aktifkan Kembali Transaksi Rutin
+
+      %div{style: "margin-top: 30px; margin-bottom: 18px; font-size: 14px"}>
+        Syarat dan ketentuan Transaksi Rutin dapat kamu lihat
+        %span
+          %a{href: "https://www.bukalapak.com/bantuan/sebagai-pembeli/fitur-pembeli/tentang-transaksi-rutin", target: '_blank'} di sini
+          %span> .

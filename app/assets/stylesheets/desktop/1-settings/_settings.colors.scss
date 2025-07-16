@@ -1,0 +1,118 @@
+// ====================
+// colors
+// ====================
+
+// reds
+$global-color-red-light:      #db285b;
+$global-color-red-brand:      #d71149;
+$global-color-red-dark:       #c30f42;
+$global-color-red-super-dark: #ad123b;
+$global-color-red-sauce:      #f00;
+
+
+$global-color-pink-coral: #ff566a;
+$global-color-pink-light: #ffe6e9;
+$global-color-pink-nude: #ec9191;
+
+// greens
+$global-color-green-super-light: #edf8e8;
+$global-color-green-light:       #9fd681;
+$global-color-green:             #87cc62;
+$global-color-green-dark:        #74b94e;
+$global-color-green-super-dark:  #5eab34;
+
+// yellows
+// PACMAN A/B SUPER SELLER
+$global-color-yellow-tequila:     #ffe8cd;
+// END PACMAN A/B SUPER SELLER
+$global-color-yellow-super-light: #fff7e2;
+$global-color-yellow-light:       #ffd165;
+$global-color-yellow:             #ffc53e;
+$global-color-yellow-dark:        #e6b138;
+$global-color-yellow-super-dark:  #d9a735;
+// PACMAN A/B SUPER SELLER
+$global-color-yellow-desert:      #ba5e20;
+// END PACMAN A/B SUPER SELLER
+$global-color-yellow-choco:       #8b6f32;
+
+// blues
+$global-color-azure: #4e9bf6;
+$global-color-teal: #5a7a89;
+$global-color-carolina: #97b3c8;
+$global-color-turquoise: #35cdb6;
+$global-color-chromium-dark: #376db0;
+$global-color-chromium-light: #e7f0fb;
+
+// grays
+$global-color-ash-light: #ddd; // border color
+$global-color-ash:       #bbb;
+$global-color-ash-dark:  #999;
+
+$global-color-sand-light:      #fafafa;
+$global-color-sand:            #f5f5f5;
+$global-color-sand-dark:       #eee;
+$global-color-sand-super-dark: #e5e5e5;
+
+$global-color-gray-tag:         #9b9b9b;
+
+// white
+$global-color-white: #fff;
+
+// blacks
+$global-color-black-solid: #000; // used on special case (e.g. box-shadow)
+$global-color-black:       #333;
+$global-color-charcoal:    #666;
+
+// color map to be accessed via utilities
+$global-utilities-colors: (
+  "ash":                $global-color-ash,
+  "ash-dark":           $global-color-ash-dark,
+  "ash-light":          $global-color-ash-light,
+  "azure":              $global-color-azure,
+  "black":              $global-color-black,
+  "carolina":           $global-color-carolina,
+  "charcoal":           $global-color-charcoal,
+  "green-light":        $global-color-green-light,
+  "green-super-light":  $global-color-green-super-light,
+  "green":              $global-color-green,
+  "green-dark":         $global-color-green-dark,
+  "green-super-dark":   $global-color-green-super-dark,
+  "pink-coral":         $global-color-pink-coral,
+  "pink-light":         $global-color-pink-light,
+  "pink-nude":          $global-color-pink-nude,
+  "red-brand":          $global-color-red-brand,
+  "red-dark":           $global-color-red-dark,
+  "red-light":          $global-color-red-light,
+  "red-sauce":          $global-color-red-sauce,
+  "sand":               $global-color-sand,
+  "sand-dark":          $global-color-sand-dark,
+  "sand-light":         $global-color-sand-light,
+  "teal":               $global-color-teal,
+  "turquoise":          $global-color-turquoise,
+  "chromium-dark":      $global-color-chromium-dark,
+  "chromium-light":     $global-color-chromium-light,
+  "white":              $global-color-white,
+  "yellow-choco":       $global-color-yellow-choco,
+  "yellow-dark":        $global-color-yellow-dark,
+  "yellow":             $global-color-yellow,
+  "yellow-light":       $global-color-yellow-light,
+  "yellow-super-light": $global-color-yellow-super-light,
+) !default;
+// old reference
+// "gray":             $global-color-ash,
+// "gray-light":       $global-color-ash-light,
+// "gray-dark":        $global-color-ash-dark,
+// "gray-sand":        $global-color-sand-light,
+// "sand":             $global-color-sand,
+// "sand-dark":        $global-color-sand-dark
+
+$global-external-colors: (
+  "facebook": #3b5998,
+  "twitter": #55acee,
+  "gplus": #dc4e41,
+  "pinterest": #cb2027,
+  "gmail": #c63737,
+  "yahoo": #a207d6,
+  "whatsapp": #25d366,
+  "line": #01ba00
+) !default;

@@ -1,0 +1,14 @@
+// ====================
+// core settings
+// ====================
+
+// namespaces
+$global-object-namespace:          "o-" !default;
+$global-component-namespace:       "c-" !default;
+$global-utility-namespace:         "u-" !default;
+
+// whitespaces & layout
+// note: not based on line-height
+// $global-spacing-unit: $global-line-height !default;
+$global-desktop-spacing-unit:   6px;
+$global-desktop-spacing-levels: 10;

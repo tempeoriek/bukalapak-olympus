@@ -1,0 +1,325 @@
+# Indonesian translations for Ruby on Rails
+# by wynst (wynst.uei@gmail.com)
+
+id:
+  mailer:
+    succeed: 'Transaksi %{product_name} sudah diproses oleh Bukalapak. Kamu dapat mendownload bukti transaksi melalui halaman detail transaksi dengan desktop web. Jika kamu mengalami kendala, hubungi BukaBantuan.'
+    failed: 'Maaf, transaksi %{product_name} kamu dengan no. %{invoice_id} tidak dapat diproses oleh Bukalapak. Uang pembayaran sebesar %{payment_amount} akan dikembalikan ke DANA atau limit kartu kredit kamu. Bila tidak dapat diproses ke DANA, uang akan dikembalikan ke Saldo (sebelumnya bernama BukaDompet).'
+  date:
+    formats:
+      default: "%d %B %Y"
+      long: "%A, %d %B %Y"
+      short: "%d.%m.%Y"
+      short_month: "%d %b %Y"
+
+    day_names:
+      - Minggu
+      - Senin
+      - Selasa
+      - Rabu
+      - Kamis
+      - "Jum’at"
+      - Sabtu
+    abbr_day_names:
+      - Min
+      - Sen
+      - Sel
+      - Rab
+      - Kam
+      - Jum
+      - Sab
+    month_names:
+      - ~
+      - Januari
+      - Februari
+      - Maret
+      - April
+      - Mei
+      - Juni
+      - Juli
+      - Agustus
+      - September
+      - Oktober
+      - November
+      - Desember
+    abbr_month_names:
+      - ~
+      - Jan
+      - Feb
+      - Mar
+      - Apr
+      - Mei
+      - Jun
+      - Jul
+      - Agu
+      - Sep
+      - Okt
+      - Nov
+      - Des
+    order:
+      - :day
+      - :month
+      - :year
+
+  time:
+    formats:
+      default: "%a, %d %b %Y %H.%M.%S %z"
+      forum: "%A, %d %b %Y pukul %H:%M:%S WIB"
+      short: "%d %b %H.%M"
+      long: "%d %B %Y %H.%M"
+      complete: "%d %B %Y, pukul %H.%M WIB"
+      detail: "%d %b %Y %H.%M"
+      compact: "%d-%b-%y %H.%M"
+      noday: "%B %Y"
+      noday_slash: "%m/%y"
+      justday: "%A"
+      withday: "%a, %d %B %Y"
+      withday_complete: "%A, %d %B %Y pukul %H:%M WIB"
+      klikpay: "%d/%m/%Y %H:%M:%S"
+      brief: "%H:%M . %d/%m/%Y"
+      hhmm: "%d %B %Y, %H:%M"
+      notime: "%d %B %Y"
+      nodate: "%H:%M"
+      shortnotime: "%d %b %Y"
+    am: "am"
+    pm: "pm"
+
+  support:
+    select:
+      prompt: "Silakan pilih"
+    array:
+      words_connector: ", "
+      two_words_connector: " dan "
+      last_word_connector: ", dan "
+
+  number:
+    format:
+      delimiter: "."
+      separator: ","
+      precision: 2
+
+    currency:
+      format:
+        format: "<span class='currency positive'>%u</span><span class='amount positive'>%n</span>"
+        negative_format: "<span class='currency negative'>-%u</span><span class='amount negative'>%n</span>"
+        unit: "Rp"
+        separator: ","
+        delimiter: "."
+        precision: 0
+
+    percentage:
+      format:
+      delimiter: "."
+      separator: ","
+      precision: 2
+
+    precision:
+      format:
+      delimiter: "."
+      separator: ","
+
+    human:
+      format:
+      delimiter: "."
+      separator: ","
+      precision: 1
+      storage_units:
+        - Byte
+        - KB
+        - MB
+        - GB
+        - TB
+
+  datetime:
+    distance_in_words:
+      counter:
+        half_a_minute: "30 detik lagi"
+        less_than_x_seconds:
+          zero:  "1 detik lagi"
+          one:   "1 detik lagi"
+          other: "%{count} detik lagi"
+        x_seconds:
+          one:   "1 detik lagi"
+          other: "%{count} detik lagi"
+        less_than_x_minutes:
+          zero:  "1 menit lagi"
+          one:   "1 menit lagi"
+          other: " %{count} menit lagi"
+        x_minutes:
+          one:   "1 menit lagi"
+          other: "%{count} menit lagi"
+        about_x_hours:
+          one:   "1 jam lagi"
+          other: "%{count} jam lagi"
+        x_days:
+          one:   "1 hari lagi"
+          other: "%{count} hari lagi"
+        about_x_months:
+          one:   "1 bulan lagi"
+          other: "%{count} bulan lagi"
+        x_months:
+          one:   "1 bulan lagi"
+          other: "%{count} bulan lagi"
+        about_x_years:
+          one:   "1 tahun lagi"
+          other: "%{count} tahun lagi"
+        over_x_years:
+          one:   "lebih dari setahun"
+          other: "lebih dari %{count} tahun"
+        almost_x_years:
+          one:   "hampir setahun"
+          other: "hampir %{count} tahun"
+
+      half_a_minute: "setengah menit"
+      less_than_x_seconds:
+        zero:  "kurang dari 1 detik"
+        one:   "kurang dari 1 detik"
+        other: "kurang dari %{count} detik"
+      x_seconds:
+        one:   "satu detik"
+        other: "%{count} detik"
+      less_than_x_minutes:
+        zero:  "kurang dari 1 menit"
+        one:   "kurang dari 1 menit"
+        other: "kurang dari  %{count} menit"
+      x_minutes:
+        one:   "satu menit"
+        other: "%{count} menit"
+      about_x_hours:
+        one:   "sekitar satu jam"
+        other: "sekitar %{count} jam"
+      x_days:
+        one:   "sehari"
+        other: "%{count} hari"
+      about_x_months:
+        one:   "sekitar sebulan"
+        other: "sekitar %{count} bulan"
+      x_months:
+        one:   "sebulan"
+        other: "%{count} bulan"
+      about_x_years:
+        one:   "setahun"
+        other: "noin %{count} tahun"
+      over_x_years:
+        one:   "lebih dari setahun"
+        other: "lebih dari %{count} tahun"
+      almost_x_years:
+        one:   "hampir setahun"
+        other: "hampir %{count} tahun"
+    prompts:
+      year:   "Tahun"
+      month:  "Bulan"
+      day:    "Hari"
+      hour:   "Jam"
+      minute: "Menit"
+      second: "Detik"
+  helpers:
+    select:
+      prompt: "Silakan pilih"
+
+    submit:
+      create: 'Buat %{model}'
+      update: 'Update %{model}'
+      submit: 'Simpan %{model}'
+
+  errors:
+    format: "%{attribute} %{message}"
+
+    messages: &errors_messages
+      inclusion: "tidak termasuk"
+      exclusion: "tidak tersedia"
+      invalid: "tidak valid"
+      confirmation: "konfirmasi tidak sesuai"
+      bukalapak_domain_invalid: "tidak boleh memakai domain bukalapak"
+      accepted: "harus diterima"
+      empty: "wajib diisi"
+      blank: "wajib diisi"
+      too_long: "terlalu panjang (maksimum %{count} karakter)"
+      too_short: "terlalu pendek (minimum %{count} karakter)"
+      wrong_length: "jumlah karakter salah (seharusnya %{count} karakter)"
+      taken: "sudah digunakan"
+      not_a_number: "hanya boleh berupa angka"
+      not_an_integer: "harus bilangan bulat"
+      greater_than: "harus lebih besar dari %{count}"
+      greater_than_or_equal_to: "harus sama atau lebih besar dari %{count}"
+      equal_to: "harus sama dengan %{count}"
+      less_than: "harus lebih kecil dari %{count}"
+      less_than_or_equal_to: "harus sama atau lebih kecil dari %{count}"
+      odd: "harus ganjil"
+      even: "harus genap"
+      record_invalid: "%{errors}"
+      spoofed_media_type: "Gambar tidak valid. Ganti URL barang Anda!"
+    template: &errors_template
+      header:
+        one: "1 kesalahan mengakibatkan %{model} ini tidak bisa disimpan"
+        other: "%{count} kesalahan mengakibatkan %{model} ini tidak bisa disimpan"
+      body: "Ada masalah dengan field berikut:"
+
+  activerecord:
+    attributes:
+      address:
+        province: "Provinsi"
+        city: "Kota"
+        area: "Kecamatan"
+        address: "Alamat"
+        post_code: "Kode Pos"
+    errors:
+      messages:
+        <<: *errors_messages
+      template:
+        <<: *errors_template
+      full_messages:
+        format: "%{attribute} %{message}"
+
+  number:
+    format:
+      separator: ","
+      delimiter: "."
+      precision: 3
+      significant: false
+      strip_insignificant_zeros: false
+
+    currency:
+      format:
+        format: "<span class='currency positive'>%u</span><span class='amount positive'>%n</span>"
+        negative_format: "<span class='currency negative'>-%u</span><span class='amount negative'>%n</span>"
+        unit: "Rp"
+        separator: ","
+        delimiter: "."
+        precision: 0
+        significant: false
+        strip_insignificant_zeros: false
+
+    percentage:
+      format:
+        delimiter: ""
+
+    precision:
+      format:
+        delimiter: ""
+
+    human:
+      format:
+        delimiter: ""
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one:   "Byte"
+            other: "Byte"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: ""
+          thousand: Ribu
+          million: Juta
+          billion: Miliar
+          trillion: Triliun
+          quadrillion: Quadriliun

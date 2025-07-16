@@ -1,0 +1,51 @@
+templateVersion: v2.0.0
+projectName: olympus
+services:
+- name: olympus
+  port: "8086"
+  environments:
+  - name: production
+    replica: "4"
+  - name: canary
+    replica: "1"
+  - name: sandbox
+    replica: "1"
+  - name: beta
+    replica: "1"
+  - name: staging
+    replica: "1"
+  nodePort: "38086"
+  healthz: healthz
+  maxMem: "2"
+  maxCpu: "2"
+  minMem: "0.5"
+  minCpu: "1"
+  limit: false
+  timeout: "1"
+  delay: "30"
+  language: ruby
+  consul: envconsul
+- name: background
+  port: "8087"
+  environments:
+  - name: production
+    replica: "2"
+  - name: canary
+    replica: "1"
+  - name: sandbox
+    replica: "1"
+  - name: beta
+    replica: "1"
+  - name: staging
+    replica: "1"
+  nodePort: "38087"
+  healthz: healthz
+  maxMem: "2"
+  maxCpu: "2"
+  minMem: "0.5"
+  minCpu: "1"
+  limit: false
+  timeout: "1"
+  delay: "30"
+  language: ruby
+  consul: envconsul

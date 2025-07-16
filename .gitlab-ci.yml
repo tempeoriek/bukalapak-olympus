@@ -1,0 +1,130 @@
+stages:
+  - test
+  - migration
+  - build
+  - deployment
+  - post-deployment
+
+variables:
+  VAR_KUBE_CONTEXT: $ENV
+
+test:
+  stage: test
+  coverage: '/\(\d+.\d+\%\) covered/'
+  image: ruby:2.6.5
+  services:
+    - mysql:5.7.21
+    - rabbitmq:latest
+  variables:
+    # Configure mysql environment variables (https://hub.docker.com/r/_/mysql/)
+    RAILS_ENV: test
+    MYSQL_DATABASE: olympus_test
+    MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    RABBITMQ_DEFAULT_VHOST: telolet
+    GIT_BRANCH: $CI_COMMIT_REF_NAME
+  before_script:
+    - cp env.sample .env
+    - apt-get update
+    - apt-get install -y libsodium-dev
+    - make dep
+    - chmod +x bin/connection_check
+    - bundle exec bin/connection_check
+    - rake db:schema:load
+  script:
+    - make test
+  artifacts:
+    when: always
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage/coverage.xml
+
+test-migration-script:
+  stage: test
+  image:
+    name: $CI_REGISTRY/sre/migration:0.0.1
+    entrypoint: [""]
+  tags:
+  - bare-metal
+  services:
+  - mysql:5.6
+  variables:
+    MYSQL_ROOT_PASSWORD: root_password
+    RAILS_ENV: test-ci
+  script:
+  - mkdir /migrate
+  - ln -s $CI_PROJECT_DIR/db/ /app/
+  - cp -R db /migrate
+  - cd /migrate && migration db:create
+  - cd /migrate && migration db:migrate
+  - cd /migrate && migration db:migrate:status
+  - cd /migrate && migration db:rollback
+
+notify-start:
+  stage: test
+  image: appropriate/curl
+  allow_failure: true
+  only:
+    - triggers
+  script:
+    - curl -XGET "https://bl-vp-bot.herokuapp.com:443/notify_start?service=$CI_PROJECT_NAME&branch=$CI_COMMIT_REF_NAME&deployer=$DEPLOYER&roles=$VAR_KUBE_CONTEXT&ci_pipeline_id=$CI_PIPELINE_ID"
+
+migration-run-production:
+  stage: migration
+  tags:
+  - bare-metal
+  image:
+    name: $CI_REGISTRY/sre/migration:0.0.1
+    entrypoint: [""]
+  variables:
+    RAILS_ENV: production
+  script:
+  - ln -s $CI_PROJECT_DIR/db/ /app/
+  - cd /app/
+  - envconsul -once -consul=$CONSUL_ADDR -sanitize -upcase -prefix=$CI_PROJECT_NAME migration db:migrate
+  - envconsul -once -consul=$CONSUL_ADDR -sanitize -upcase -prefix=$CI_PROJECT_NAME migration db:migrate:status
+  when: manual
+
+build-image:
+  stage: build
+  image: $CI_REGISTRY/sre/gudang/docker:1.0.0
+  tags:
+  - build-image
+  only:
+  - triggers
+  script:
+  - export VERSION=${CI_COMMIT_TAG:-$CI_COMMIT_SHA}
+  - docker login -u $CI_REGISTRY_USER -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+  - make build push
+
+deploy-kube3:
+  stage: deployment
+  image: $CI_REGISTRY/sre/gudang/deployment:3.2.0
+  tags:
+  - bare-metal
+  only:
+  - triggers
+  script:
+  - export VERSION=${CI_COMMIT_TAG:-$CI_COMMIT_SHA}
+  - kubectl config use-context kube-cl3-prod
+  - make deploy
+
+notify-done:
+  stage: post-deployment
+  when: on_success
+  image: appropriate/curl
+  allow_failure: true
+  only:
+    - triggers
+  script:
+    - curl -XGET "https://bl-vp-bot.herokuapp.com:443/notify_done?service=$CI_PROJECT_NAME&branch=$CI_COMMIT_REF_NAME&deployer=$DEPLOYER&roles=$VAR_KUBE_CONTEXT&ci_pipeline_id=$CI_PIPELINE_ID"
+
+notify-failed:
+  stage: post-deployment
+  when: on_failure
+  image: appropriate/curl
+  allow_failure: true
+  only:
+    - triggers
+  script:
+    - curl -XGET "https://bl-vp-bot.herokuapp.com:443/notify_fail?service=$CI_PROJECT_NAME&branch=$CI_COMMIT_REF_NAME&deployer=$DEPLOYER&roles=$VAR_KUBE_CONTEXT&ci_pipeline_id=$CI_PIPELINE_ID"

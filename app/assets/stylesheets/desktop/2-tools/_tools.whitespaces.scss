@@ -1,0 +1,56 @@
+// ====================
+// whitespaces mixin
+// ====================
+
+$available-directions: "top" "right" "bottom" "left";
+
+// assuming $global-desktop-spacing-unit is 6px;
+// @include m-margin(1) -> margin: 6px;
+// @include m-margin(1 2) -> margin: 6px 12px;
+// @include m-margin(2, "top") -> margin-top: 12px;
+// @include m-margin(2, "top", "right") -> margin-top: 12px; margin-right: 12px;
+
+@function whitespace-values($levels) {
+  $values: null;
+  $counter: 1;
+
+  @each $level in $levels {
+    @if($level < 0 or $level > $global-desktop-spacing-levels) {
+      $level: 1;
+    }
+
+    @if($counter < 5) {
+      $values: append($values, rem-calc($level * $global-desktop-spacing-unit));
+    }
+
+    $counter: $counter + 1;
+  }
+
+  @return $values;
+}
+
+@mixin m-margin($levels, $directions: null, $important: "") {
+  @if($directions == null) {
+    margin: whitespace-values($levels) #{$important};
+  }
+  @else {
+    @each $direction in $directions {
+      @if(index($available-directions, $direction)) {
+        margin-#{$direction}: rem-calc(nth($levels, 1) * $global-desktop-spacing-unit) #{$important};
+      }
+    }
+  }
+}
+
+@mixin m-padding($levels, $directions: null, $important: "") {
+  @if($directions == null) {
+    padding: whitespace-values($levels) #{$important};
+  }
+  @else {
+    @each $direction in $directions {
+      @if(index($available-directions, $direction)) {
+        padding-#{$direction}: rem-calc(nth($levels, 1) * $global-desktop-spacing-unit) #{$important};
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "submitTimeUtc": "2020-06-04T16:42:50Z",
+  "status": "INVALID_REQUEST",
+  "reason": "INVALID_DATA",
+  "message": "Declined - One or more fields in the request contains invalid data"
+}

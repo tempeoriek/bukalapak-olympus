@@ -1,0 +1,4 @@
+id:
+  electricity:
+    errors:
+      wrong_customer_number_format: 'Format ID Pelanggan / Meter tidak valid'

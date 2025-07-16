@@ -1,0 +1,60 @@
+%table{ width: "100%", align: "left" }
+  %tr
+    %td
+      %div{ "mc:edit" => "std_content00" }
+        %div{ :style => "margin: 10px 2px;" }
+          %h1 Transaksi Rutin #{@product_name} Gagal
+
+        %div{ :style => "margin: 10px 2px;" }
+          Hai #{@user[:name]},<br>
+          Mohon maaf, transaksi rutin kamu untuk #{@product_name} periode #{I18n.l @formatted_date, format: "%B %Y"} dengan nomor tagihan #{@payment_id} tidak dapat kami proses. Uang pembayaran sejumlah <b>#{money @amount}</b> akan dikembalikan ke BukaDompet kamu. Berikut adalah detail transaksi rutin kamu:
+
+        %div{ style: "margin: 30px 20px;" }
+          %div{style: "margin-bottom: 18px; font-size: 14px"}>
+            .box{style: 'margin-bottom: 18px;'}
+              %h2 Detail Transaksi Rutin
+            %table.box{width: "100%", align: "left", style: "font-size: 14px"}
+              %tr
+                %td{style: "padding-bottom: 12px; color: #999999; width: 175px"} Produk Transaksi Rutin:
+                %td{style: "padding-bottom: 12px"}= @product_name
+              %tr
+                %td{style: "padding-bottom: 12px; color: #999999; width: 175px"} Nama:
+                %td{style: "padding-bottom: 12px"}= @customer_name
+              - if @product_name.to_s.downcase.include? "listrik"
+                %tr
+                  %td{style: "padding-bottom: 12px; color: #999999; width: 175px"} Nama:
+                  %td{style: "padding-bottom: 12px"}= @customer_name
+                %tr
+                  %td{style: "padding-bottom: 12px; color: #999999; width: 175px"} ID Pelanggan:
+                  %td{style: "padding-bottom: 12px"}= @customer_number
+              - elsif @product_name.to_s.downcase.include? "bpjs kes"
+                %tr
+                  %td{style: "padding-bottom: 12px; color: #999999; width: 175px"} Nama:
+                  %td{style: "padding-bottom: 12px"}= @customer_name
+                %tr
+                  %td{style: "padding-bottom: 12px; color: #999999; width: 175px"} No. VA Keluarga:
+                  %td{style: "padding-bottom: 12px"}= @customer_number
+              - elsif @product_name.to_s.downcase.include? "pdam"
+                %tr
+                  %td{style: "padding-bottom: 12px; color: #999999; width: 175px"} Nomor Pelanggan:
+                  %td{style: "padding-bottom: 12px"}= @customer_number
+                %tr
+                  %td{style: "padding-bottom: 12px; color: #999999; width: 175px"} Nama Lengkap:
+                  %td{style: "padding-bottom: 12px"}= @customer_name
+                %tr
+                  %td{style: "padding-bottom: 12px; color: #999999; width: 175px"} Area:
+                  %td{style: "padding-bottom: 12px"}= @area
+              %tr
+                %td{style: "padding-bottom: 12px; color: #999999; width: 175px"} Tanggal Transaksi Rutin:
+                %td{style: "padding-bottom: 12px"}= @formatted_date.day
+              %tr
+                %td{style: "padding-bottom: 12px; color: #999999; width: 175px"} Periode Transaksi:
+                %td{style: "padding-bottom: 12px"}= I18n.l @formatted_date, format: "%B %Y"
+
+        %div{ style: "margin: 10px 2px;" }
+          Syarat dan ketentuan Transaksi Rutin dapat kamu lihat
+          %span
+            %a{href: "https://www.bukalapak.com/bantuan/sebagai-pembeli/fitur-pembeli/tentang-transaksi-rutin", target: '_blank'} di sini
+            %span>.
+
+-# = render "application/mailer/bl_mailer_simplify_thanks_and_survey", thanks_type: 0

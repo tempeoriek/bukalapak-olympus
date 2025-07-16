@@ -1,0 +1,116 @@
+[
+	{
+		"provider": "Telkomsel",
+		"product_name": "Kartu Halo",
+		"logo_url": "https://s4.bukalapak.com/images/mobile/logo_telkomsel.png",
+		"partner_product_id": "113",
+		"partner": "sepulsa",
+		"partner_admin_charge": 0,
+		"prefix": [
+			"0811",
+			"0812",
+			"0813",
+			"0821",
+			"0822",
+			"0823",
+			"0851",
+			"0852",
+			"0853"
+		]
+	},
+	{
+		"provider": "Indosat",
+		"product_name": "Indosat ooredoo",
+		"logo_url": "https://s4.bukalapak.com/images/mobile/logo_indosat.png",
+		"partner_product_id": "113",
+		"partner": "sepulsa",
+		"partner_admin_charge": 0,
+		"prefix": [
+			"0814",
+			"0815",
+			"0816",
+			"0855",
+			"0856",
+			"0857",
+			"0858"
+		]
+	},
+	{
+		"provider": "XL",
+		"product_name": "XL Prioritas",
+		"logo_url": "https://s4.bukalapak.com/images/mobile/logo_xl.png",
+		"partner_product_id": "113",
+		"partner": "sepulsa",
+		"partner_admin_charge": 0,
+		"prefix": [
+			"0817",
+			"0818",
+			"0819",
+			"0859",
+			"0877",
+			"0878",
+			"0879"
+		]
+	},
+	{
+		"provider": "Axis",
+		"product_name": "Axis Pascabayar",
+		"logo_url": "https://s4.bukalapak.com/images/mobile/logo_axis.png",
+		"partner_product_id": "113",
+		"partner": "sepulsa",
+		"partner_admin_charge": 0,
+		"prefix": [
+			"0831",
+			"0832",
+			"0838",
+			"08591",
+			"08598"
+		]
+	},
+	{
+		"provider": "3",
+		"product_name": "3 Pascabayar",
+		"logo_url": "https://s4.bukalapak.com/images/mobile/logo_3.png",
+		"partner_product_id": "113",
+		"partner": "sepulsa",
+		"partner_admin_charge": 0,
+		"prefix": [
+			"0895",
+			"0896",
+			"0897",
+			"0898",
+			"0899"
+		]
+	},
+	{
+		"provider": "Smartfren",
+		"product_name": "Smartfren Pascabayar",
+		"logo_url": "https://s4.bukalapak.com/images/mobile/logo_smartfren.png",
+		"partner_product_id": "113",
+		"partner": "sepulsa",
+		"partner_admin_charge": 0,
+		"prefix": [
+			"0881",
+			"0882",
+			"0883",
+			"0884",
+			"0885",
+			"0886",
+			"0887",
+			"0888",
+			"0889"
+		]
+	},
+	{
+		"provider": "Bolt",
+		"product_name": "Bolt Pascabayar",
+		"logo_url": "https://s4.bukalapak.com/images/mobile/logo_bolt.png",
+		"partner_product_id": "113",
+		"partner": "sepulsa",
+		"partner_admin_charge": 0,
+		"prefix": [
+			"999",
+			"998"
+		]
+	}
+]

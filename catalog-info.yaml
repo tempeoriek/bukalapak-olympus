@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: olympus
+  description: Microservice that handles Postpaid Electricity, CreditCard Bill, Postpaid PhoneCredit, BPJS Kesehatan & PDAM.
+spec:
+  type: backend
+  owner: o2o-vpe
+  lifecycle: deprecated
+  cloudCostAttribution: '{"business":{"method":"static", "value": [{"receiver_business_line": "vp_marketplace", "ratio": "0.02113583095"}, {"receiver_business_line": "vp_mitra_non_trader", "ratio": "0.978864169"}]}}'
+ # The cost of this service is evenly distributed among the receivers. You can find the detailed ratio breakdown [https://docs.google.com/spreadsheets/d/1IIRwGS7OGTTvYf_NSbX0aIHOHNyjH6O7d5fj8mxsuPA/edit?gid=1983714624#gid=1983714624]. For the source of the ratio values, please refer to [https://docs.google.com/spreadsheets/d/1HMgyq51SJeZoe9TX79D-Gc1z_wJRtkGDZL-PNBCuqCQ/edit?gid=614285851#gid=614285851&range=BT123]. If the ratio is no longer relevant, feel free to contact #finops-support to have them updated..

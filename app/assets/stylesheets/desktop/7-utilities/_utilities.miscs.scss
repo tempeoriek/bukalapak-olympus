@@ -1,0 +1,267 @@
+//scss-lint:disable ImportantRule
+
+.is-hidden {
+  display: none !important;
+}
+
+// js-related: readmore content
+.is-limited-height {
+  max-height: f-dimension(100);
+  overflow: hidden;
+}
+
+.u-display-transition {
+  height: auto;
+  opacity: 1;
+  transition: all .3s ease-in-out;
+
+  &.is-hidden-transition {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+}
+
+.u-default-transition {
+  opacity: 1;
+  transition: all .3s ease-in-out;
+
+  &.is-hidden-transition {
+    opacity: 0;
+  }
+}
+
+.#{$global-utility-namespace} {
+  &block {
+    display: block !important;
+  }
+
+  &is-visibility-hidden {
+    height: 0 !important;
+    margin: 0 !important;
+    overflow: hidden;
+    padding: 0 !important;
+    visibility: hidden;
+  }
+
+  &clearfix {
+    @include clearfix;
+  }
+
+  &clear-both {
+    clear: both !important;
+  }
+
+  // used for copy to clipboard, width undefined
+  &transparent {
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    position: absolute;
+    opacity: 0;
+  }
+
+  &semi-transparent {
+    opacity: .5;
+  }
+
+  &pointer {
+    cursor: pointer;
+  }
+
+  &cursor-default {
+    cursor: default;
+  }
+
+  &cursor-zoom-in {
+    cursor: zoom-in;
+  }
+
+  &disabled {
+    background-color: $global-color-sand;
+
+    cursor: not-allowed;
+
+    color: $global-color-ash;
+  }
+
+  &display-block {
+    display: block !important;
+  }
+
+  &display-inline-block {
+    display: inline-block !important;
+  }
+
+  &display-inline {
+    display: inline !important;
+  }
+
+  &display-table {
+    display: table !important;
+  }
+
+  &display-inline-flex {
+    display: inline-flex !important;
+  }
+
+  &table-fixed {
+    width: 100% !important;
+    table-layout: fixed !important;
+  }
+
+  &visibility-hidden {
+    visibility: hidden;
+  }
+
+  &display-table-row {
+    display: table-row !important;
+  }
+
+  &display-table-cell {
+    display: table-cell !important;
+  }
+
+  &float-left {
+    float: left !important;
+  }
+
+  &float-right {
+    float: right !important;
+  }
+
+  &float-none {
+    float: none !important;
+  }
+
+  &overflow-hidden {
+    overflow: hidden !important;
+  }
+
+  &overflow-auto {
+    overflow: auto !important;
+  }
+
+  &overflow-x--scroll {
+    overflow-x: scroll !important;
+  }
+
+  &overflow-y--scroll {
+    overflow-y: scroll !important;
+  }
+
+  &panelize {
+    @include panelize();
+  }
+
+  &inline-block {
+    display: inline-block;
+  }
+
+  @for $idx from 0 through $global-desktop-spacing-levels {
+    &opct--#{$idx} {
+      @include t-opacity($idx);
+    }
+  }
+
+  &animated-hover {
+    transition: opacity .3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      @include t-opacity(8.5);
+    }
+  }
+
+  // cart summary sticky
+  &column-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  &inline-table {
+    display: inline-table;
+  }
+
+  &reset-height {
+    height: initial;
+  }
+
+  // Display Flex
+  &display-flex {
+    display: flex !important;
+
+    &--center {
+      justify-content: center;
+    }
+
+    &--space-between {
+      justify-content: space-between;
+    }
+
+    &--wrap {
+      flex-wrap: wrap;
+    }
+
+    &--v-center {
+      align-items: center;
+    }
+
+    &--col-reverse {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &placeholder-transform--none::placeholder {
+    text-transform: none;
+  }
+}
+
+.u-price-min::before {
+  content: "-";
+}
+
+.#{$global-utility-namespace} {
+  &max-height-container {
+    max-height: f-dimension(37);
+    overflow: auto;
+  }
+
+  &box-shadow {
+    &--none {
+      box-shadow: none !important;
+    }
+    &--strong {
+      border: 1px solid $global-color-sand-dark;
+      box-shadow: 0 12px 24px 0 $global-color-sand-super-dark;
+    }
+  }
+}
+
+[v-cloak] {
+  display: none;
+}
+
+// Hanya sementara, untuk support hidden class lama
+.hidden {
+  display: none;
+}
+//scss-lint:enable ImportantRule
+
+.u-position-left--100 {
+  left: 100% !important;
+}
+
+.u-list--no-bullet {
+  list-style-type: none !important;
+  margin-left: 0;
+}
+
+.u-list--splat {
+  margin-left: 0;
+
+  li {
+    display: inline-block !important;
+  }
+}

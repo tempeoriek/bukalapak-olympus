@@ -1,0 +1,272 @@
+include:
+- project: 'infra/gitops/minerva'
+  ref: v1
+  file: 'shared/pipeline-template/.gitlab-ci-general.yaml'
+- project: 'bukalapak/core-te/cucumber-job'
+  ref: ${TE_CUCUMBER_JOB_BRANCH}
+  file: 'microservices/olympus.gitlab-ci.yaml'
+- project: 'bukalapak/core-te/testrail-integration'
+  ref: master
+  file: 'template-jobs.yaml'
+
+variables:
+  VAR_KUBE_CONTEXT: $ENV
+  VAR_KUBE_NAMESPACE: olympus
+  CANARY_WEIGHT: 5
+  CANARY_WEIGHT_STEP_1: 10
+  BASE_IMAGE: $CI_REGISTRY/$CI_PROJECT_PATH/base
+  SKIP_CONFIGMAP_VALIDATOR: "true"
+
+calculate-base-image-version:
+  stage: before-ci
+  image: ${CI_REGISTRY}/infra/docker/base-images/ruby:3.1.0-alpine3.15
+  tags:
+    - cicd
+  variables:
+    BASE_REFERENCES: "Gemfile.lock deploy/docker/Dockerfile.builder"
+    ENV_FILE: env_checksum
+  script:
+    - echo "BASE_VERSION=$(ruby script/calculate_files_checksum.rb Gemfile.lock deploy/docker/Dockerfile.builder)" >> $ENV_FILE
+  artifacts:
+    reports:
+      dotenv: $ENV_FILE
+
+build-base-image:
+  stage: before-test
+  image: $CI_REGISTRY/sre/gudang/img:1.2.0
+  tags:
+    - build-img
+  only:
+    changes:
+      - deploy/docker/Dockerfile.builder
+      - Gemfile.lock
+  dependencies:
+    - calculate-base-image-version
+  when: manual
+  script:
+    - docker login -u $CI_REGISTRY_USER -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+    - docker build --build-arg CI_JOB_TOKEN="$CI_JOB_TOKEN" --build-arg BASE_VERSION="$BASE_VERSION" -t "${BASE_IMAGE}:${BASE_VERSION}" -f deploy/docker/Dockerfile.builder .
+    - docker push "${BASE_IMAGE}:${BASE_VERSION}"
+
+test:
+  stage: test
+  coverage: '/\(\d+.\d+\%\) covered/'
+  image: "${BASE_IMAGE}:${BASE_VERSION}"
+  tags:
+    - cicd
+    - kubernetes-executor
+  dependencies:
+    - calculate-base-image-version
+  services:
+    - mysql:5.7.21
+    - redis:4.0.11-alpine
+  except:
+    refs:
+      - /^trigger-te-test.+/
+  variables:
+    # Configure mysql environment variables (https://hub.docker.com/r/_/mysql/)
+    RAILS_ENV: test
+    MYSQL_DATABASE: olympus_test
+    MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    DATABASE_HOST: mysql
+    GIT_BRANCH: $CI_COMMIT_REF_NAME
+  before_script:
+    - make replace-gitlab-url
+    - apk add gcompat
+    - cp env.sample .env
+    - apk update
+    - apk add cmake openssl-dev
+    - BUNDLE_FORCE_RUBY_PLATFORM=1 bundle install --with test --jobs $(nproc)
+    - bundle cache
+    - chmod +x bin/connection_check
+    - bundle exec bin/connection_check
+    - rake db:schema:load
+  script:
+    - make test
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - ./*report_tms.json
+      - coverage/coverage.xml
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage/coverage.xml
+
+# TMS Report
+tms-ut-report:
+  stage: after-test
+  extends: .tms-report
+  variables:
+    REPORT_FILE: UT-OLYMPUS-report_tms.json
+  only:
+    refs:
+    - master
+    - /^release-.+/
+  needs:
+    - test
+  allow_failure: true
+  retry: 2
+
+tms-generate-report:
+  stage: after-test
+  extends: .tms-generate-report
+  only:
+    refs:
+    - master
+    - /^release-.+/
+  variables:
+    PROJECT_NAME: "OLYMPUS"
+  allow_failure: true
+  needs:
+    - tms-ut-report
+
+test-migration-script:
+  stage: test
+  image:
+    name: $CI_REGISTRY/sre/migration:0.0.1
+    entrypoint: [""]
+  tags:
+    - production
+  services:
+    - mysql:5.7
+  except:
+    refs:
+      - /^trigger-te-test.+/
+  variables:
+    MYSQL_ROOT_PASSWORD: root_password
+    DATABASE_HOST: mysql
+    RAILS_ENV: test-ci
+  script:
+    - mkdir /migrate
+    - ln -s $CI_PROJECT_DIR/db/ /app/
+    - cp -R db /migrate
+    - cd /migrate && migration db:create
+    - cd /migrate && migration db:migrate
+    - cd /migrate && migration db:migrate:status
+    - cd /migrate && migration db:rollback
+  when: manual
+
+build-image:
+  stage: build
+  image: $CI_REGISTRY/sre/gudang/img:1.2.0
+  tags:
+  - build-img
+  dependencies:
+    - calculate-base-image-version
+  only:
+    refs:
+      - master
+      - /^release.+/
+  variables:
+    IMAGE: test
+  before_script:
+    - make replace-gitlab-url
+  script:
+  - export VERSION=${CI_COMMIT_TAG:-$CI_COMMIT_SHA}
+  - docker login -u $CI_REGISTRY_USER -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+  - make build push
+
+download-pipeline-dependencies:
+  only:
+    refs:
+    - master
+    - /^release.+/
+    - /^migrate.+/
+
+download-repository-dependencies:
+  only:
+    refs:
+    - master
+    - /^release.+/
+    - /^migrate.+/
+
+build-docker-migrate: &build-migrate
+  stage: build
+  image: $CI_REGISTRY/sre/gudang/img:1.2.0
+  tags:
+  - build-img
+  only:
+    refs:
+    - master
+    - /^release.+/
+  variables:
+    IMAGE_BASE: $CI_REGISTRY/bukalapak/$VAR_KUBE_NAMESPACE
+    SERVICE: migrate
+  script:
+  - export VERSION=${CI_COMMIT_TAG:-$CI_COMMIT_SHA}
+  - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
+  - docker build -t $IMAGE_BASE/$SERVICE:$VERSION --build-arg ssh_private_key="$GITLAB_PRIVATE_KEY" -f ./deploy/manifest/migration/Dockerfile .
+  - docker push $IMAGE_BASE/$SERVICE:$VERSION
+  cache:
+    key: gems
+    paths:
+    - vendor/bundle
+    policy: pull
+
+.migration-only:
+  only:
+    refs:
+    - /^migrate.+/
+
+.database-migration-manifest:
+  extends:
+  - .generate-and-validate-manifest
+  - .migration-only
+  variables:
+    OUTPUT_PATH: deploy/_output/migration/$ENV/manifest
+    FILEPATH: deploy/_output/migration/$ENV/manifest
+    MANIFEST_PATH: deploy/manifest
+
+build-migration-container:
+  extends:
+  - build-docker-migrate
+  - .migration-only
+
+preproduction-database-migration-manifest:
+  extends: .database-migration-manifest
+  stage: before-preproduction-deployment
+  variables:
+     ENV: preproduction
+  tags:
+  - shared
+  - preproduction
+
+production-database-migration-manifest:
+  extends: .database-migration-manifest
+  stage: before-production-deployment
+  variables:
+    ENV: production
+  tags:
+  - shared
+  - production
+
+run-preproduction-database-migration:
+  extends:
+  - .deploy-template
+  - .migration-only
+  stage: preproduction-deployment
+  when: manual
+  variables:
+     ENV: preproduction
+     FILEPATH: deploy/_output/migration/$ENV/manifest
+  tags:
+  - shared
+  - preproduction
+  environment:
+     name: preproduction
+
+run-production-database-migration:
+  extends:
+  - .deploy-template
+  - .migration-only
+  stage: production-deployment
+  when: manual
+  variables:
+     ENV: production
+     FILEPATH: deploy/_output/migration/$ENV/manifest
+  tags:
+  - shared
+  - production
+  environment:
+     name: production

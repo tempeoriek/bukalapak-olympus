@@ -1,0 +1,106 @@
+[
+  {
+    "name": "BNI",
+    "image_url": "https://s2.bukalapak.com/images/desktop/aset-brand/section1-3.png",
+    "biller_partner_codes": {
+      "bni": "BNI",
+      "pnl": "Bank Negara Indonesia (BNI)"
+    }
+  },
+  {
+    "name": "CITIBANK",
+    "image_url": "https://s2.bukalapak.com/images/desktop/aset-brand/section1-3.png",
+    "biller_partner_codes": {
+      "bni": "CITIBANK",
+      "pnl": "DEFAULT"
+    }
+  },
+  {
+    "name": "BRI",
+    "image_url": "https://s2.bukalapak.com/images/desktop/aset-brand/section1-3.png",
+    "biller_partner_codes": {
+      "bni": "BRI",
+      "pnl": "DEFAULT"
+    }
+  },
+  {
+    "name": "BUKOPIN",
+    "image_url": "https://s2.bukalapak.com/images/desktop/aset-brand/section1-3.png",
+    "biller_partner_codes": {
+      "bni": "BUKOPIN",
+      "pnl": "DEFAULT"
+    }
+  },
+  {
+    "name": "MEGA",
+    "image_url": "https://s2.bukalapak.com/images/desktop/aset-brand/section1-3.png",
+    "biller_partner_codes": {
+      "bni": "MEGA",
+      "pnl": "DEFAULT"
+    }
+  },
+  {
+    "name": "DANAMON",
+    "image_url": "https://s2.bukalapak.com/images/desktop/aset-brand/section1-3.png",
+    "biller_partner_codes": {
+      "bni": "DANAMON",
+      "pnl": "DEFAULT"
+    }
+  },
+  {
+    "name": "NIAGA",
+    "image_url": "https://s2.bukalapak.com/images/desktop/aset-brand/section1-3.png",
+    "biller_partner_codes": {
+      "bni": "NIAGA",
+      "pnl": "DEFAULT"
+    }
+  },
+  {
+    "name": "AMEX",
+    "image_url": "https://s2.bukalapak.com/images/desktop/aset-brand/section1-3.png",
+    "biller_partner_codes": {
+      "bni": "AMEX",
+      "pnl": "DEFAULT"
+    }
+  },
+  {
+    "name": "HSBC",
+    "image_url": "https://s2.bukalapak.com/images/desktop/aset-brand/section1-3.png",
+    "biller_partner_codes": {
+      "bni": "HSBC",
+      "pnl": "DEFAULT"
+    }
+  },
+  {
+    "name": "SCB",
+    "image_url": "https://s2.bukalapak.com/images/desktop/aset-brand/section1-3.png",
+    "biller_partner_codes": {
+      "bni": "SCB",
+      "pnl": "DEFAULT"
+    }
+  },
+  {
+    "name": "GE",
+    "image_url": "https://s2.bukalapak.com/images/desktop/aset-brand/section1-3.png",
+    "biller_partner_codes": {
+      "bni": "GE",
+      "pnl": "DEFAULT"
+    }
+  },
+  {
+    "name": "ANZ",
+    "image_url": "https://s2.bukalapak.com/images/desktop/aset-brand/section1-3.png",
+    "biller_partner_codes": {
+      "bni": "ANZ",
+      "pnl": "DEFAULT"
+    }
+  },
+  {
+    "name": "PANIN",
+    "image_url": "https://s2.bukalapak.com/images/desktop/aset-brand/section1-3.png",
+    "biller_partner_codes": {
+      "bni": "PANIN",
+      "pnl": "DEFAULT"
+    }
+  }
+]

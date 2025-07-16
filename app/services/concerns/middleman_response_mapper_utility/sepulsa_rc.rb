@@ -1,0 +1,19 @@
+# frozen_string_literal: true
+
+module MiddlemanResponseMapperUtility
+  module SepulsaRC
+    SUCCESS = "00"
+    PENDING = "10"
+    WRONG_NUMBER_OR_BLOCKED_NUMBER_OR_EXPIRED_NUMBER = "20"
+    PRODUCT_ISSUE = "21"
+    DUPLICATE_TRANSACTION = "22"
+    CONNECTION_TIMEOUT = "23"
+    PROVIDER_CUTOFF = "24"
+    KWH_OVERLIMIT = "25"
+    PAYMENT_OVERLIMIT = "26"
+    BILL_ALREADY_PAID_OR_NOT_AVAILABLE = "50"
+    INVALID_INQUIRY_AMOUNT_OR_NO_INQUIRY = "51"
+    ORDER_CANCELLED_BY_OPS = "98"
+    GENERAL_ERROR = "99"
+  end
+end

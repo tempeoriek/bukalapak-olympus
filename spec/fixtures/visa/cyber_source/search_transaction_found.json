@@ -1,0 +1,99 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://apitest.cybersource.com/tss/v2/searches/ccfc3499-299c-4e04-8908-cd38686c6238",
+      "method": "GET"
+    }
+  },
+  "searchId": "ccfc3499-299c-4e04-8908-cd38686c6238",
+  "save": false,
+  "name": "Search by Code",
+  "query": "clientReferenceInformation.code:20200620005708979735",
+  "count": 1,
+  "totalCount": 1,
+  "limit": 10,
+  "offset": 0,
+  "sort": "submitTimeUtc:desc",
+  "timezone": "Asia/Jakarta",
+  "submitTimeUtc": "2020-06-22T17:29:32Z",
+  "_embedded": {
+    "transactionSummaries": [
+      {
+        "id": "5925894301016594603001",
+        "submitTimeUtc": "2020-06-19T17:57:10Z",
+        "merchantId": "bukalapak_com",
+        "applicationInformation": {
+          "applications": [
+            {
+              "name": "ics_oct",
+              "reasonCode": "100",
+              "rCode": "1",
+              "rFlag": "SOK",
+              "reconciliationId": "5925894301016594603001",
+              "rMessage": "Request was processed successfully.",
+              "returnCode": "1500000"
+            }
+          ],
+          "reasonCode": "100",
+          "rCode": "1",
+          "rFlag": "SOK"
+        },
+        "buyerInformation": {},
+        "clientReferenceInformation": {
+          "code": "20200620005708979735",
+          "applicationName": "REST API"
+        },
+        "consumerAuthenticationInformation": {},
+        "deviceInformation": {},
+        "fraudMarkingInformation": {},
+        "merchantInformation": {},
+        "orderInformation": {
+          "billTo": {},
+          "shipTo": {},
+          "amountDetails": {
+            "totalAmount": "100000.00",
+            "currency": "IDR"
+          }
+        },
+        "paymentInformation": {
+          "paymentType": {
+            "type": "credit card",
+            "method": "VI"
+          },
+          "customer": {
+            "customerId": "7010000000008617047"
+          },
+          "card": {
+            "suffix": "7047",
+            "prefix": "491738",
+            "type": "001"
+          }
+        },
+        "processingInformation": {
+          "businessApplicationId": "12",
+          "commerceIndicator": "7"
+        },
+        "processorInformation": {
+          "processor": {
+            "name": "vdccimbniagaid"
+          }
+        },
+        "pointOfSaleInformation": {
+          "terminalId": "12345678",
+          "partner": {}
+        },
+        "riskInformation": {
+          "providers": {
+            "fingerPrint": {}
+          }
+        },
+        "_links": {
+          "transactionDetail": {
+            "href": "https://apitest.cybersource.com/tss/v2/transactions/5925894301016594603001",
+            "method": "GET"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+// ==========================================================================
+// Box Shadow
+// ==========================================================================
+
+// Here we set a variable assuming that default and module settings
+// are not set globally. If they have been previously been defined,
+// the following variable will be overriden and will be set to `true`.
+$imported-global-settings: false !default;
+
+@if ($imported-global-settings == false) {
+  @warn "Oops! Have you included a global settings files?";
+}
+
+@mixin panelize($hoverable: false) {
+  background-color: $global-color-white;
+
+  box-shadow: 0 2px 1px transparentize($global-color-black, .95);
+  border-radius: $global-border-radius;
+  border: 1px solid $global-color-sand-dark;
+
+  transition: border .2s ease-out;
+
+  @if ($hoverable == true) {
+    &:hover {
+      border-color: $global-color-pink-coral;
+      box-shadow: 0 1px 1px transparentize($global-color-pink-coral, .95);
+    }
+  }
+}

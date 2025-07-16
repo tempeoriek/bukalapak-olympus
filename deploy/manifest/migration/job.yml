@@ -1,0 +1,44 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{.config.projectName}}-db-schema-migration-job-{{.variable.VERSION}}
+  namespace: {{.config.projectName}}
+  annotations:
+    release: '{{.variable.VERSION}}'
+  labels: &labels
+    project: {{.config.projectName}}
+    service: db-schema-migration
+    env: {{.environment.name}}
+spec:
+  backoffLimit: 0
+  parallelism: 1
+  completions: 1
+  template:
+    metadata:
+      annotations:
+        release: '{{.variable.VERSION}}'
+      labels: *labels
+    spec:
+      nodeSelector:
+        env: {{.environment.name}}
+      containers:
+      - name: {{.config.projectName}}-db-schema-migration
+        image: {{.variable.CI_REGISTRY}}/bukalapak/{{.config.projectName}}/migrate:{{.variable.VERSION}}
+        command: ["/bin/sh","-c"]
+        args: ["/app/bin/migration db:migrate; /app/bin/migration db:migrate:status"]
+        resources:
+          limits:
+            memory: {{.service.maxMem}}Gi
+            cpu: {{.service.maxCpu}}
+          requests:
+            memory: {{.service.minMem}}Gi
+            cpu: {{.service.minCpu}}
+        envFrom:
+        - configMapRef:
+            name: {{.config.projectName}}-configmap-{{or .variable.SUFFIX .environment.name}}
+        - secretRef:
+            name: {{.config.projectName}}-olympus-{{.environment.name}}
+            optional: false
+      imagePullSecrets:
+      - name: blregistry
+      restartPolicy: Never

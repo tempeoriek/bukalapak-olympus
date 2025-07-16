@@ -1,0 +1,19 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://apitest.cybersource.com/tss/v2/searches/a86bb18a-48ab-428f-ad98-962becc0cd2b",
+      "method": "GET"
+    }
+  },
+  "searchId": "a86bb18a-48ab-428f-ad98-962becc0cd2b",
+  "save": false,
+  "name": "Search by Code",
+  "query": "clientReferenceInformation.code:20200620005708979734",
+  "count": 0,
+  "totalCount": 0,
+  "limit": 10,
+  "offset": 0,
+  "sort": "submitTimeUtc:desc",
+  "timezone": "Asia/Jakarta",
+  "submitTimeUtc": "2020-06-22T17:37:30Z"
+}

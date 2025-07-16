@@ -1,0 +1,51 @@
+!!!
+%html
+  %head
+    %title= @title
+    = render "views/css/_mailer_css"
+  %body{leftmargin: "0", marginheight: "0", marginwidth: "0", offset: "0", topmargin: "0"}
+    %center.simplifyEmailCenterWrapper
+      %table#simplifyEmailOuterTable{bgcolor: "#ffffff", border: "0", cellpadding: "0", cellspacing: "0", height: "100%", width: "100%"}
+        %tr
+          %td
+            %table.templateContainer{align: "center", border: "0", cellpadding: "0", cellspacing: "0", width: "600"}
+              -# HEADER AREA: begin
+              -# Header Wrapper
+              %tr
+                %td{align: "left"}
+                  %table{width: "100%"}
+                    %tr
+                      %td{width: "30", height: "20"}
+                      %td{width: "540", height: "20"}
+                      %td{width: "30", height: "20"}
+                    %tr
+                      %td{width: "30"}
+                      %td{width: "540"}
+                        %img{src: "https://s1.bukalapak.com/images/logo-new/bukalapak-primary-logo.png" }
+                      %td{width: "30"}
+                    %tr
+                      %td{width: "30", height: "12"}
+                      %td{width: "540", height: "12"}
+                      %td{width: "30", height: "12"}
+
+              -# CONTENT E-MAIL AREA: begin
+              -# Content and Thanks Signature Wrapper
+              %tr
+                %td#contentContainer{bgcolor: "#ffffff"}
+                  %table{width: "100%", align: "left"}
+                    %tr
+                      %td{width: "30", height: "12"}
+                      %td{width: "540", height: "12"}
+                      %td{width: "30", height: "12"}
+                    %tr
+                      %td{width: "30"}
+                      %td{width: "540", align: "left"}
+                        = yield
+
+                      %td{width: "30"}
+                    %tr
+                      %td{width: "30", height: "30"}
+                      %td{width: "540", height: "30"}
+                      %td{width: "30", height: "30"}
+
+              -# CONTENT E-MAIL AREA: end

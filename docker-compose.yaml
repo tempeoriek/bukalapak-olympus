@@ -1,0 +1,54 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:5.7.21
+    platform: linux/x86_64 # Required for Mac M1
+    command: --skip-ssl --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    ports:
+      - $DATABASE_HOST:$DATABASE_PORT:3306
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+      MYSQL_DATABASE: $DATABASE_DEV_NAME
+      MYSQL_USER: $DATABASE_USERNAME
+      MYSQL_PASSWORD: $DATABASE_PASSWORD
+    volumes:
+      - mysql_data:/var/lib/mysql
+  redis:
+    image: redis:6.2.13-alpine3.18
+    ports:
+      - $REDIS_HOST:$REDIS_PORT:6379
+  app:
+    build:
+      context: .
+      ssh:
+        # Allows pulling from private repository.
+        # Adjust the path accordingly if your path differs
+        # e.g. on MacOS /Users/yourname/.ssh/id_rsa
+        - default=~/.ssh/id_rsa
+    platform: linux/amd64 # Required for Mac M1
+    command: rails s -b 0.0.0.0
+    ports:
+      - 127.0.0.1:$PORT:3000
+    volumes:
+      - ./:/opt/app
+    environment:
+      DATABASE_HOST: db
+      REDIS_HOST: redis
+  background:
+    build:
+      context: .
+      ssh:
+        - default
+    platform: linux/amd64 # Required for Mac M1
+    command: bundle exec bin/background
+    ports:
+      - 127.0.0.1:8087:8087
+    volumes:
+      - ./:/opt/app
+    environment:
+      DATABASE_HOST: db
+      REDIS_HOST: redis
+
+
+volumes:
+  mysql_data:

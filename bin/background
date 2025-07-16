@@ -1,0 +1,56 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'sneakers'
+require 'sneakers/runner'
+require 'sinatra'
+require './config/environment'
+require_all 'app/subscribers'
+
+
+STDERR.reopen(STDOUT)
+
+children = []
+
+set :port, 8087
+set :bind, '0.0.0.0'
+
+subscribers = [
+  Subscribers::UpdateRemote,
+  Subscribers::EmailNotif,
+  Subscribers::PartnerConfirm,
+  Subscribers::PartnerProcess,
+  Subscribers::PartnerProcessCcb,
+  Subscribers::SievexPredict
+]
+
+# Subscribe to pubsub
+subscribers.each do |subscriber|
+  children << fork do
+    subscriber.run
+  end
+end
+
+fork do
+  # turn healthz logging off
+  set :logging, false
+
+  get '/healthz' do
+    begin
+      content_type :json
+      {message: 'OK'}.to_json
+    rescue StandardError => e
+      content_type :json
+      status 500
+      body({message: e.message}.to_json)
+    end
+  end
+end
+
+Process.waitall
+
+at_exit do
+  children.each do |child|
+    Process.kill 9, child
+  end
+end

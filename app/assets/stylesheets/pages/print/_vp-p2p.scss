@@ -1,0 +1,478 @@
+#insurance-bill
+#electricity-non-bill,
+#cable-tv,
+#multifinance,
+#bpjs-kesehatan,
+#electricity-prepaid,
+#electricities {
+  h1,
+  h2,
+  h3 {
+    font-weight: normal;
+    margin: 0;
+  }
+
+  h1,
+  .h1 {
+    font-size: pixel-to-mm(14px);
+  }
+
+  h2,
+  .h2 {
+    font-size: pixel-to-mm(12px);
+  }
+
+  h3,
+  .h3 {
+    font-size: pixel-to-mm(8px);
+  }
+
+  p {
+    line-height: 1.8;
+    margin-bottom: 0;
+    margin-top: pixel-to-mm(6px);
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  p:first-of-type {
+    margin-top: 0;
+  }
+
+  .invoice {
+    font-size: pixel-to-mm(10px);
+
+    &__header {
+      margin-bottom: pixel-to-mm(12px);
+
+      h1 {
+        margin-top: pixel-to-mm(24px);
+      }
+
+      img {
+        height: pixel-to-mm(24px);
+      }
+
+      table {
+        &.logo {
+          border: 0;
+          width: 100%;
+
+          td {
+            border: 0;
+          }
+        }
+      }
+
+      .bukopin img {
+        height: pixel-to-mm(36px);
+      }
+
+      .bankmandiri img {
+        height: pixel-to-mm(40px);
+        width: auto;
+      }
+    }
+
+
+    &__details {
+      h2 {
+        font-weight: bold;
+        margin-bottom: pixel-to-mm(24px);
+        margin-top: pixel-to-mm(36px);
+      }
+
+      table {
+        margin-bottom: pixel-to-mm(36px);
+        width: 100%;
+
+        &.compact {
+          td {
+            padding: pixel-to-mm(8px);
+          }
+        }
+      }
+
+      tr.gray-bg {
+        td,
+        th {
+          background-color: #fafafa;
+        }
+      }
+
+      td,
+      th {
+        border: solid pixel-to-mm(1px) #ddd;
+        border-left: 0;
+        border-right: 0;
+        font-size: pixel-to-mm(10px);
+        padding: pixel-to-mm(12px);
+        padding-right: pixel-to-mm(6px);
+      }
+
+      td {
+        font-size: pixel-to-mm(8px);
+      }
+
+    }
+
+  }
+}
+
+.postpaid-receipt {
+  .no-border {
+    border: 0 !important;
+  }
+
+  td,
+  th {
+    border: solid pixel-to-mm(1px) #ddd;
+    padding: pixel-to-mm(6px);
+
+    &:first-child {
+      border-left: 0;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  th {
+    font-size: pixel-to-mm(10px);
+  }
+
+  td {
+    font-size: pixel-to-mm(8px);
+
+    &.gray {
+      color: #666;
+    }
+
+    &.remove-border {
+      border: 0;
+    }
+  }
+
+  tr.no-border-bottom > td {
+    border-left: 0;
+  }
+
+  tr.no-border-bottom > td:first-of-type {
+    border-right: 0;
+    border-bottom: 0;
+  }
+
+  tr.no-border-bottom + tr.no-border-bottom > td:first-child {
+    border-top: 0;
+    border-left: 0;
+  }
+}
+
+.postpaid-electricity__header {
+  > img {
+    width: 60%;
+    float: right;
+  }
+}
+
+.footer-ecoupon {
+  position: relative;
+  height: pixel-to-mm(125px);
+
+  > img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    color: #fff !important;
+    width: 100%;
+    border: 0;
+    padding: pixel-to-mm(14px) pixel-to-mm(18px);
+  }
+}
+
+.footer-social-media {
+  float: left;
+}
+
+.footer-customer-number {
+  float: right;
+}
+
+.page-break {
+  display: block;
+  clear: both;
+  page-break-after: always;
+}
+
+footer {
+  font-size: pixel-to-mm(8px);
+  width: pixel-to-mm(535px);
+  border-top: solid pixel-to-mm(1px) #ddd;
+  padding-top: pixel-to-mm(6px);
+  padding-bottom: pixel-to-mm(18px);
+
+  &-label {
+    display: inline-flex;
+    align-items: center;
+
+    & + & {
+      margin-left: pixel-to-mm(18px);
+    }
+  }
+
+  &-logo {
+    width: pixel-to-mm(16px);
+
+    &--social {
+      background-color: #fff !important;
+
+      border-radius: 50%;
+      height: pixel-to-mm(16px);
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-value {
+    font-size: pixel-to-mm(10px);
+    font-weight: bold;
+    margin-left: pixel-to-mm(4px);
+  }
+}
+.add-padding {
+  padding-left: pixel-to-mm(30px);
+  padding-right: pixel-to-mm(30px);
+}
+
+.u-display-flex {
+  display: flex;
+}
+
+.u-flex {
+  flex: 1;
+}
+
+.u-txt--xtiny {
+  font-size: pixel-to-mm(8px);
+}
+
+.u-txt--xxtiny {
+  font-size: pixel-to-mm(7px);
+}
+
+.u-mrgn-top--half {
+  margin-top: rem-calc(3px) !important;
+}
+
+// main page for invoice print
+#invoice,
+.invoice {
+  h1,
+  h2,
+  h3 {
+    font-weight: normal;
+    margin: 0;
+  }
+
+  h1,
+  .h1 {
+    font-size: pixel-to-mm(14px);
+  }
+
+  h2,
+  .h2 {
+    font-size: pixel-to-mm(12px);
+  }
+
+  h3,
+  .h3 {
+    font-size: pixel-to-mm(8px);
+  }
+
+  p {
+    margin-top: pixel-to-mm(6px);
+    margin-bottom: 0;
+  }
+
+  p:first-of-type {
+    margin-top: 0;
+  }
+
+  // Flight invoice
+  .invoice {
+    font-size: pixel-to-mm(8px);
+
+    &__header {
+      margin-bottom: pixel-to-mm(12px);
+      h1 {
+        margin-top: pixel-to-mm(24px);
+      }
+      img {
+        width: pixel-to-mm(159px);
+        height: pixel-to-mm(27px);
+      }
+    }
+
+    &__general-info {
+      margin-bottom: pixel-to-mm(24px);
+    }
+
+    &__buyer-details {
+      width: 100%;
+      background-color: #fafafa !important;
+      padding-top: pixel-to-mm(2px);
+      padding-bottom: pixel-to-mm(2px);
+      margin-bottom: pixel-to-mm(18px);
+
+      .invoice__buyer-name,
+      .invoice__buyer-email,
+      .invoice__buyer-partner {
+        display: block;
+        padding: pixel-to-mm(12px);
+        float: left;
+      }
+
+      &-col-wrapper {
+        display: block;
+        padding: pixel-to-mm(6px) 0;
+        float: left;
+
+        + .invoice__buyer-details-col-wrapper > .invoice__buyer-details-col {
+          border-left: pixel-to-mm(1px) solid #eee;
+        }
+      }
+
+      &-col {
+        padding: pixel-to-mm(6px) pixel-to-mm(12px);
+      }
+
+      h2 {
+        display: block;
+        font-size: pixel-to-mm(8px);
+        font-weight: bold;
+        background-color: #ddd !important;
+        margin-top: pixel-to-mm(-2px);
+        margin-bottom: pixel-to-mm(-2px);
+        padding: pixel-to-mm(16px) pixel-to-mm(18px);
+        float: left;
+      }
+
+      &:after {
+        clear: both;
+        content: "";
+        display: block;
+      }
+    }
+
+    &__buyer-name,
+    &__buyer-email {
+      border-right: solid pixel-to-mm(1px) #eee;
+    }
+
+    .invoice-other-details {
+      margin-bottom: pixel-to-mm(42px);
+      tr,
+      td {
+        border: 0;
+      }
+    }
+
+    &__details {
+      h2 {
+        margin-bottom: pixel-to-mm(12px);
+        font-weight: bold;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: solid pixel-to-mm(1px) #ddd;
+        padding: pixel-to-mm(6px);
+
+        &:first-child {
+          border-left: 0;
+        }
+
+        &:last-child {
+          border-right: 0;
+        }
+      }
+
+      th {
+        font-size: pixel-to-mm(10px);
+      }
+
+      td {
+        font-size: pixel-to-mm(8px);
+
+        &.gray {
+          color: #666;
+        }
+
+        &.remove-border {
+          border: 0;
+        }
+      }
+
+      tr.no-border-bottom > td {
+        border-left: 0;
+      }
+
+      tr.no-border-bottom > td:first-of-type {
+        border-right: 0;
+        border-bottom: 0;
+      }
+
+      tr.no-border-bottom + tr.no-border-bottom > td:first-child {
+        border-top: 0;
+        border-left: 0;
+      }
+    }
+
+  }
+
+  .misc-information {
+    font-size: pixel-to-mm(10px);
+    margin-top: pixel-to-mm(18px);
+
+    position: relative;
+
+    a {
+      color: #d71149;
+      text-decoration: none;
+    }
+
+    h2 {
+      margin-bottom: pixel-to-mm(8px);
+      font-weight: bold;
+
+      span {
+        font-weight: normal;
+      }
+    }
+
+    p {
+      margin-bottom: pixel-to-mm(8px);
+    }
+
+    ol {
+      padding: 0;
+      list-style-position: inside;
+    }
+  }
+}

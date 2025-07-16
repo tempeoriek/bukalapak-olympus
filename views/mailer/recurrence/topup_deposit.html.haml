@@ -1,0 +1,53 @@
+%table{width: "100%", align: "left"}
+  %tr
+    %td
+      %div{style: "margin-bottom: 12px;"}
+        %h1 Saatnya Melakukan Transaksi Rutin
+
+      %div{style: "margin-bottom: 18px; font-size: 14px"}>
+        %p{style: "color: #333333"}
+          Hai #{@user[:name]},<br>
+          Sebentar lagi adalah jadwal kamu melakukan transaksi rutin #{@product_name}. Pastikan saldo BukaDompet mencukupi sebelum tanggal transaksi rutin kamu jatuh tempo.
+
+      %div{style: "margin-bottom: 18px; font-size: 14px"}>
+        .box{style: 'margin-bottom: 18px;'}
+          %h2 Detail Transaksi Rutin
+        %table.box{width: "100%", align: "left", style: "font-size: 14px"}
+          %tr
+            %td{style: "padding-bottom: 12px; color: #999999; width: 175px"} Produk Transaksi Rutin:
+            %td{style: "padding-bottom: 12px"}= @product_name
+          - if @product_name.to_s.downcase.include? "listrik"
+            %tr
+              %td{style: "padding-bottom: 12px; color: #999999; width: 175px"} ID Pelanggan:
+              %td{style: "padding-bottom: 12px"}= @customer_number
+          - elsif @product_name.to_s.downcase.include? "bpjs kes"
+            %tr
+              %td{style: "padding-bottom: 12px; color: #999999; width: 175px"} No. VA Keluarga:
+              %td{style: "padding-bottom: 12px"}= @customer_number
+          - elsif @product_name.to_s.downcase.include? "pdam"
+            %tr
+              %td{style: "padding-bottom: 12px; color: #999999; width: 175px"} Nomor Pelanggan:
+              %td{style: "padding-bottom: 12px"}= @customer_number
+            %tr
+              %td{style: "padding-bottom: 12px; color: #999999; width: 175px"} Nama Lengkap:
+              %td{style: "padding-bottom: 12px"}= @customer_name
+            %tr
+              %td{style: "padding-bottom: 12px; color: #999999; width: 175px"} Area:
+              %td{style: "padding-bottom: 12px"}= @area
+          %tr
+            %td{style: "padding-bottom: 12px; color: #999999; width: 175px"} Tanggal Transaksi Rutin:
+            %td{style: "padding-bottom: 12px"}= @formatted_date.day
+          %tr
+            %td{style: "padding-bottom: 12px; color: #999999; width: 175px"} Transaksi Selanjutnya:
+            %td{style: "padding-bottom: 12px"}= I18n.l @formatted_date, format: :notime
+      %div{style: "margin-bottom: 18px; font-size: 14px"}>
+        Kamu dapat menambah isi saldo BukaDompet dengan klik tombol di bawah ini.
+
+      %div{style: "margin-bottom: 18px; font-size: 14px"}>
+        %a{href: "https://www.bukalapak.com/dompet", id: 'actionButton', target: '_blank' } Tambah Saldo BukaDompet
+
+      %div{style: "margin-top: 30px; margin-bottom: 18px; font-size: 14px"}>
+        Syarat dan ketentuan Transaksi Rutin dapat kamu lihat
+        %span
+          %a{href: "https://www.bukalapak.com/bantuan/sebagai-pembeli/fitur-pembeli/tentang-transaksi-rutin", target: '_blank'} di sini
+          %span>.

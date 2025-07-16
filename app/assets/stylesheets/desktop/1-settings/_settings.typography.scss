@@ -1,0 +1,51 @@
+// ====================
+// typography setting
+// ====================
+
+$global-font-family--code:    "Source Code Pro", "Monaco", Courier, monospace !default;
+
+// font weight
+$global-font-weight-light:    300;
+$global-font-weight-normal:   400;
+$global-font-weight-bold:     700;
+
+$global-available-line-height-ratio: (
+  tiny: 1.4,
+  small: 1.4,
+  base: 1.4,
+  fair: 1.2,
+  medium: 1.2,
+  large: 1.2,
+  xlarge: 1.2,
+  xxlarge: 1.2,
+  hero: 1.2
+);
+
+// font sizes
+// there should be a better way to define the scale
+// $global-available-font-size: (
+//   tiny: $global-font-size - 4,
+//   small: $global-font-size - 2,
+//   base: $global-font-size,
+//   fair: $global-font-size + 2,
+//   medium: $global-font-size + 4,
+//   large: $global-font-size + 8,
+//   xlarge: $global-font-size * 2,
+//   xxlarge: ($global-font-size * 2) + 4,
+//   hero: ($global-font-size * 3) - 2
+// );
+
+// maybe this one is better?
+// Just assign the value without even worry
+// if the default size is changing
+$global-available-font-size: (
+  tiny: 10px,
+  small: 12px,
+  base: $global-font-size,
+  fair: 16px,
+  medium: 18px,
+  large: 22px,
+  xlarge: 28px,
+  xxlarge: 32px,
+  hero: 40px
+);

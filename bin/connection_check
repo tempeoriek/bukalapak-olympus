@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+require 'erb'
+require 'yaml'
+require 'active_record'
+require 'dotenv'
+
+Dotenv.load
+
+puts "Loading environment"
+template = ERB.new File.read File.expand_path('../config/database.yml', __dir__)
+settings = YAML.load template.result binding
+environment = ENV['RAILS_ENV'] || 'default'
+
+retry_count = 0
+puts settings
+puts environment
+while retry_count < 12 do
+  sleep(10) if retry_count > 0
+  begin
+    puts "Trying to make active record connection"
+
+    ActiveRecord::Base.establish_connection(
+      adapter:  settings[environment]["adapter"],
+      host:     settings[environment]["host"],
+      username: settings[environment]["username"],
+      password: settings[environment]["password"],
+      database: settings[environment]["database"]
+    )
+    puts "Connecting..."
+    ActiveRecord::Base.connection
+    if ActiveRecord::Base.connected?
+      puts "Connected!"
+      exit(0)
+    end
+    puts "Not Connected!"
+  rescue => e
+    puts e
+    puts "Not Connected!"
+  end
+  puts "retrying...."
+  retry_count += 1
+end
+
+exit(1)

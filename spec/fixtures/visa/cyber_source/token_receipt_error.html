@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Copyright 2012-2017 CyberSource Corporation.  All rights reserved. -->
+<html>
+<head>
+
+</head>
+<body>
+
+
+    <form id="custom_redirect" action="http://localhost:3000/receipt" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+        <input type="hidden" name="req_currency" id="req_currency" value="IDR" />
+        <input type="hidden" name="req_card_type" id="req_card_type" value="001" />
+        <input type="hidden" name="req_card_number" id="req_card_number" value="xxxxxxxxxxxx1111" />
+        <input type="hidden" name="decision" id="decision" value="ERROR" />
+        <input type="hidden" name="req_locale" id="req_locale" value="en" />
+        <input type="hidden" name="signature" id="signature" value="L3HgUp9E+CltvC473PqMOwM2K2xQWhukn2cz/CP+//M=" />
+        <input type="hidden" name="req_card_expiry_date" id="req_card_expiry_date" value="06-2025" />
+        <input type="hidden" name="message" id="message" value="Request parameters are invalid or missing" />
+        <input type="hidden" name="signed_field_names" id="signed_field_names" value="decision,req_access_key,req_profile_id,req_transaction_uuid,req_transaction_type,req_reference_number,req_amount,req_currency,req_locale,req_payment_method,req_bill_to_forename,req_bill_to_email,req_card_number,req_card_type,req_card_expiry_date,required_fields,reason_code,message,signed_field_names,signed_date_time" />
+        <input type="hidden" name="req_transaction_uuid" id="req_transaction_uuid" value="a0e05894acd3caaf21b126fb49d34e63" />
+        <input type="hidden" name="reason_code" id="reason_code" value="101" />
+        <input type="hidden" name="required_fields" id="required_fields" value="bill_to_surname" />
+        <input type="hidden" name="req_bill_to_forename" id="req_bill_to_forename" value="NoReal" />
+        <input type="hidden" name="req_transaction_type" id="req_transaction_type" value="create_payment_token" />
+        <input type="hidden" name="req_payment_method" id="req_payment_method" value="card" />
+        <input type="hidden" name="req_access_key" id="req_access_key" value="7cb88fa24ffb30e79e10949ced57a23c" />
+        <input type="hidden" name="req_profile_id" id="req_profile_id" value="C3396489-5C91-4188-987C-1BB5B9C3C687" />
+        <input type="hidden" name="req_reference_number" id="req_reference_number" value="1591955172000182" />
+        <input type="hidden" name="req_amount" id="req_amount" value="500000" />
+        <input type="hidden" name="req_bill_to_email" id="req_bill_to_email" value="null@cybersource.com" />
+        <input type="hidden" name="signed_date_time" id="signed_date_time" value="2020-06-12T09:46:14Z" />
+    <noscript>
+        <p>Your browser does not support JavaScript. Click the button below to continue.</p>
+        <input type="submit" name="commit" value="Continue" data-disable-with="Continue" />
+    </noscript>
+</form><script type="text/javascript">
+    window.onload = function(){
+        document.forms['custom_redirect'].submit();
+    }
+</script>
+</body>
+</html>
+

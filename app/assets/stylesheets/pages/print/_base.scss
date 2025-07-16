@@ -1,0 +1,220 @@
+///
+// Print styles.
+// Inlined to avoid required HTTP connection:
+// www.phpied.com/delay-loading-your-print-css/
+// Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
+//
+// scss-lint:disable QualifyingElement PseudoElement VendorPrefix ColorKeyword
+.print-only {
+  display: none !important;
+}
+
+.show-for-print {
+  display: none !important;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  background-color: #fff;
+  color: #333;
+  overflow-y: scroll;
+  min-height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+}
+
+@media print {
+  // Black prints faster: h5bp.com/s
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  html {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+    overflow-x: visible;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  // Don't show links for images, or javascript/internal links
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  .hide-on-print { display: none !important; }
+
+  .print-only { display: block !important; }
+
+  .hide-for-print { display: none !important; }
+
+  .show-for-print { display: inherit !important; }
+
+  .break-page-after {
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+}
+
+@page {
+  margin: 1.25cm .5cm;
+}
+
+pre,
+blockquote {
+  border: 1px solid #999;
+  page-break-inside: avoid;
+}
+
+thead {
+  display: table-header-group;
+}
+
+// h5bp.com/t
+tr,
+img {
+  page-break-inside: avoid;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: solid 1px #333;
+  padding: 6px;
+  vertical-align: top;
+}
+
+dl {
+  margin: 0;
+}
+
+dd {
+  margin: 0;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-weight: inherit;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+h5 {
+  font-size: 1.2em;
+}
+
+h6 {
+  font-size: 1.1em;
+}
+
+th > h1,
+th > h2,
+th > h3,
+th > h4,
+th > h5,
+th > h6,
+th > p, {
+  margin-bottom: 0;
+}
+
+#page {
+  width: 100%;
+  position: relative;
+}

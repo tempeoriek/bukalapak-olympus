@@ -1,0 +1,32 @@
+default: &default
+  adapter:  mysql2
+  reconnect: true
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  pool:     <%= ENV['DATABASE_POOL'] %>
+  host:     <%= ENV['DATABASE_HOST'] || '127.0.0.1' %>
+  port:     <%= ENV['DATABASE_PORT'] %>
+
+development:
+  <<: *default
+  database: <%= ENV['DATABASE_DEV_NAME'] %>
+
+test: &test
+  <<: *default
+  database:   <%= ENV['DATABASE_TEST_NAME'] %>
+  reconnect:  true
+  pool:       5
+  timeout:    10000
+
+production:
+  <<: *default
+  database: <%= ENV['DATABASE_PROD_NAME'] %>
+
+staging:
+  adapter: mysql2
+  database: <%= ENV['DATABASE_STAGING_NAME'] %>
+  username: <%= ENV['DATABASE_STAGING_USERNAME'] %>
+  password: <%= ENV['DATABASE_STAGING_PASSWORD'] %>
+  host:     <%= ENV['DATABASE_STAGING_HOST'] || '127.0.0.1' %>
+  pool:    50
+  timeout: 10000

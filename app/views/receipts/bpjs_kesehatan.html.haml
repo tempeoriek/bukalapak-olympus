@@ -1,0 +1,128 @@
+&nbsp;
+.postpaid-receipt.u-pad-left--5.u-pad-right--5
+  %h6{style: "font-size: 14px;"}= "Bukti Pembayaran BPJS Kesehatan"
+  %table{cellpadding:"0px", style: "margin-top: -15px; margin-left: -6px; padding: 0px; font-size: 10px;"}
+    %tr
+      %td.no-border.u-txt--tiny{width: '25%', style: "padding-bottom: 0px;"}
+        %span No
+      %td.no-border.u-txt--tiny{style: "padding-bottom: 0px;"}
+        %span :
+      %td.no-border.u-txt--tiny{style: "padding-bottom: 0px;"}
+        %span= "##{@invoice[:payment_id]}"
+    %tr{style: "padding: 0px;"}
+      %td.no-border.u-txt--tiny{width: '25%', style: "padding-bottom: 0px;"}
+        %span Tanggal
+      %td.no-border.u-txt--tiny{style: "padding-bottom: 0px;"}
+        %span :
+      %td.no-border.u-txt--tiny{style: "padding-bottom: 0px;"}
+        - if @transaction.paid_at.present?
+          %span= I18n.l @transaction.paid_at, format: "%d %B %Y, %H:%M %Z"
+        - else
+          %span -
+    %tr{style: "padding: 0px;"}
+      %td.no-border.u-txt--tiny{width: '25%', style: "padding-bottom: 0px;"}
+        %span Partner Layanan
+      %td.no-border.u-txt--tiny{style: "padding-bottom: 0px;"}
+        %span :
+      %td.no-border.u-txt--tiny{style: "padding-bottom: 0px;"}
+        %span= @transaction.partner_hash[:name]
+  .u-float-right.postpaid-electricity__header{style: 'margin-top: -85px;'}
+    = wicked_pdf_image_tag "https://s2.bukalapak.com/images/logo-new/bukalapak-primary-logo.png", style: "height: 20px; width: 128px;"
+    - if @transaction.partner.to_s.downcase.include? "dji"
+      %br
+      .u-txt--tiny.u-fg--ash-dark.u-mrgn-top--1{style: 'display: inline-block; font-size: 10px;'}
+        Partner Layanan
+        = wicked_pdf_image_tag "http://s2.bukalapak.com/images/desktop/logo-external/bankmandiri_201810251710.png", style: "height: 14px; width: 80px;"
+.u-mrgn-top--1
+.postpaid-receipt.u-pad-left--5.u-pad-right--5
+  .invoice
+    .invoice__details
+      .u-mrgn-left--0.u-border-top--1--sand-dark.u-border-bottom--1--sand-dark.u-mrgn-bottom--3
+        .u-bg--sand-light.u-pad-left--0
+          .u-display-table.u-border-collapsed.u-width-1.u-border-top--1--sand-dark
+            .u-display-table-cell.u-pad--3.u-4of12{style: 'width: 25%;'}
+              .u-txt--tiny.u-fg--ash-dark{style: 'font-size: 10px;'} No. VA Keluarga
+              %h3.u-txt--bold{style: 'font-size: 12px;'}= @transaction.customer_number
+            .u-display-table-cell.u-pad--3.u-4of12{style: 'width: 25%;'}
+              .u-txt--tiny.u-fg--ash-dark{style: 'font-size: 10px;'} Nama Lengkap
+              %h3.u-txt--bold{style: 'font-size: 12px;'}= @transaction.customer_name
+            .u-display-table-cell.u-pad--3.u-4of12{style: 'width: 25%;'}
+              .u-txt--tiny.u-fg--ash-dark{style: 'font-size: 10px;'} Metode Pembayaran
+              %h3.u-txt--bold{style: 'font-size: 12px;'}= @invoice[:payment_type_details][:name]
+      %h2{style: 'font-size: 12px;'} Informasi Pelanggan
+      %hr{style: "background-color: #eeeeee; color: #eeeeee; border: none; height: 1px;"}
+      %table.u-mrgn-left--1.u-border-bottom--1--sand-dark.u-mrgn-bottom--3{cellpadding: "0px", style: "padding: 0px; font-size: 10px;"}
+        %tr
+          %td.no-border{width: '25%'}
+            %span ID Transaksi
+          %td.no-border
+            .u-float-left.u.mrgn-left--0 :&nbsp;
+            %span= @transaction.reference_number
+        %tr
+          %td.no-border{width: '25%'}
+            %span Nama Cabang
+          %td.no-border
+            .u-float-left.u.mrgn-left--0 :&nbsp;
+            %span= @transaction.branch_name
+        %tr
+          %td.no-border{width: '25%'}
+            %span Jumlah Peserta
+          %td.no-border
+            .u-float-left.u.mrgn-left--0 :&nbsp;
+            %span= @transaction.family_member_count
+        %tr
+          %td.no-border{width: '25%'}
+            %span Periode
+          %td.no-border
+            .u-float-left.u.mrgn-left--0 :&nbsp;
+            %span #{@transaction.bill_period} (#{@transaction.payment_period.to_i} bulan)
+      - if !@transaction.family_members.empty?
+        %h2{style: 'font-size: 12px;'} Anggota Keluarga
+        %table.u-mrgn-left--1.u-mrgn-bottom--3
+          %thead.u-border-top--1--sand-dark.u-border-bottom--1--sand-dark
+            %tr
+              %th.u-border-right--1--sand-dark.u-txt--bold{style: 'text-align: left; font-size: 10px;'} No. Kepesertaan
+              %th.u-txt--bold{style: 'text-align: left; font-size: 10px;'} Nama
+              %th.u-txt--bold{style: 'text-align: left; font-size: 10px;'} Premi
+              %th.u-txt--bold{style: 'text-align: left; font-size: 10px;'} Saldo
+          %tbody
+            - @transaction.family_members.each do |family_member|
+              %tr
+                %td.u-border-right--1--sand-dark.u-border-bottom--1--sand-dark{style: 'font-size: 10px;'}
+                  = family_member[:member_number]
+                %td.u-border-bottom--1--sand-dark{style: 'font-size: 10px;'}= family_member[:name]
+                %td.u-border-bottom--1--sand-dark{style: 'font-size: 10px;'}= util.money(family_member[:premium])
+                %td.u-border-bottom--1--sand-dark{style: 'font-size: 10px;'}= util.money(family_member[:balance])
+      %h2{style: 'font-size: 12px;'} Detail Tagihan
+      %table
+        %thead.u-border-top--1--sand-dark.u-border-bottom--1--sand-dark
+          %tr
+            %th.u-border-right--1--sand-dark.u-txt--bold{colspan: 2, style: 'text-align: left; font-size: 10px;'} Keterangan
+            %th.u-txt--bold{width: "100px" ,style: 'text-align: right; font-size: 10px;'} Jumlah
+        %tbody
+          %tr
+            %td.u-border-right--1--sand-dark.u-border-bottom--1--sand-dark{colspan: 2, style: 'font-size: 10px;'}
+              = "Tagihan BPJS Kesehatan (Periode #{@transaction.bill_period} (#{@transaction.payment_period.to_i} bulan))"
+            %td.u-border-bottom--1--sand-dark{style: 'text-align: right; font-size: 10px;'}= util.money(@transaction.amount - @transaction.admin_charge)
+          %tr
+            %td.u-border-right--1--sand-dark.u-border-bottom--1--sand-dark{colspan: 2, style: 'font-size: 10px;'} Biaya Admin
+            %td.u-border-bottom--1--sand-dark{style: 'text-align: right; font-size: 10px;'}= util.money(@transaction.admin_charge)
+          - @invoice.dig(:amount, :details).each do | key, value |
+            - if key != 'transactions' && value.abs > 0
+              - if key == 'voucher'
+                %tr
+                  %td.u-border-right--1--sand-dark.u-border-bottom--1--sand-dark{colspan: 2, style: 'font-size: 10px;'}= transaction_details_label[key.to_sym] + " (#{@invoice.dig(:voucher_code)})"
+                  %td.u-border-bottom--1--sand-dark{style: 'text-align: right; font-size: 10px;'}= util.money(value.to_i)
+              - else
+                %tr
+                  %td.u-border-right--1--sand-dark.u-border-bottom--1--sand-dark{colspan: 2, style: 'font-size: 10px;'}= transaction_details_label[key.to_sym]
+                  %td.u-border-bottom--1--sand-dark{style: 'text-align: right; font-size: 10px;'}= util.money(value.to_i)
+          %tr
+            %td.no-border{width: '66%'}
+            %td.u-border-right--1--sand-dark.u-border-bottom--1--sand-dark.u-txt--bold{style: "border-left: none;"} Total Pembayaran
+            %td.u-border-bottom--1--sand-dark.u-txt--bold{style: 'text-align: right; font-size: 10px;'}= util.money(@invoice.dig(:amount, :total))
+      %h2{style: 'font-size: 12px;'} Catatan Penting
+      %ol.u-pad-left--3
+        %li.u-txt--tiny{style: 'font-size: 10px;'}= 'Bukti transaksi ini dinyatakan sah oleh BPJS'
+        - if @transaction.info
+          %li.u-txt--tiny{style: 'font-size: 10px;'}= @transaction.info

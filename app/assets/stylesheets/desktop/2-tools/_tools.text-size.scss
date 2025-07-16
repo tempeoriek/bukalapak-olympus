@@ -1,0 +1,17 @@
+// ====================
+// Text size
+// ====================
+
+// generate font-size based on type.
+// see settings/settings.typography for available sizes.
+
+@mixin txt-size($type) {
+  $size: map-get($global-available-font-size, $type);
+
+  @if($size) {
+    @include font-size($size, map-get($global-available-line-height-ratio, $type));
+  }
+  @else {
+    @include font-size(map-get($global-available-font-size, "base"), none);
+  }
+}
